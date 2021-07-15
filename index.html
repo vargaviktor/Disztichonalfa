@@ -1,0 +1,6622 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>PAPP Tibor - DISZTICHON ALFA; Első magyar automatikus versgenerátor, 1993</title>
+  <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+  <meta http-equiv="refresh" content="30">
+</head>
+<style>
+//body {background-color: powderblue;}
+h1   {color: blue;}
+p.cimlap {
+	color: black;
+	font-size:2vw;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+}
+p.disztichon {
+	color: black;
+	font-size:3vw;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+}
+p.mini {
+	color: black;
+	font-size:1vw;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+}
+p.ujat {
+	background-color: lightblue;
+	width: 400px;
+	padding: 10px;
+	color: black;
+	font-size:1.5vw;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	margin: auto;
+}
+</style>
+
+<body onload="document.getElementById('disztichon').innerHTML=StrofaX();">
+
+<!-- debug: 
+Strófa szám:<input type="text" id="number" name="number" value=13 />
+<button onclick="document.getElementById('disztichon').innerHTML=StrofaX()">Generálás</button> 
+<button onclick="document.getElementById('disztichon').innerHTML=StrofaX('koltoi')">Generálás (költői BŐVÍTETT változat)</button>
+-->
+
+<p class=cimlap id="cimlap">
+<b>PAPP Tibor </br>
+DISZTICHON ALFA</br>
+Ezermillió enyhén abszurd vagy pornográf disztichon</br>
+Első magyar automatikus versgenerátor</br>
+1993</br></b>
+</p>
+<hr>
+<p class=disztichon id="disztichon"></p>
+<hr>
+
+<p class=mini id="miniszoveg">Az eddig megjelenített disztichonok száma:</p>
+<!--
+<div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3243786&c=9731671" alt="AmazingCounters.com"></a></div>
+-->
+<!-- Start of CuterCounter Code -->
+<div align="center"><a href="https://www.cutercounter.com/" target="_blank"><img src="https://www.cutercounter.com/hits.php?id=gucdcaq&nd=9&style=3" border="0" alt="website counter"></a></div>
+<!-- End of CuterCounter Code -->
+</br>
+<p class=ujat id="ujat">Kattintson ide vagy nyomjon Frissítést egy új disztichonért.</p>
+<script>
+//
+// PAPP Tibor 
+// DISZTICHON ALFA
+// Ezermillió enyhén abszurd vagy pornográf disztichon
+// Első magyar automatikus versgenerátor
+// 1993
+//
+// Online verzió: V1.0.0
+// backlog: négány költöi hiányzik, nem lett elkészítve.
+// Online verziót készítette: viktor.varga@gmail.com
+// Ha hibát talál kérem jelezze!
+//
+
+//document.getElementById("ujat").addEventListener("mouseover", generateNew());
+document.getElementById("ujat").onclick = function() {generateNew()};
+
+function generateNew(){  
+location.reload();  
+}
+
+function getstrofa(){  
+var number=document.getElementById("number").value;  
+return number;
+}  
+
+function vel(max) {
+    var x = Math.floor((Math.random() * max)) + 1 ;
+    return x;
+};
+
+function StrofaX(mod){
+//debug:
+//var melyik=getstrofa();
+
+
+
+var melyik=vel(24);
+if (mod=="koltoi"){
+if (melyik==1) return S01("koltoi");  // OK, no koltoi impl.
+if (melyik==2) return S02(); 		  // OK 		
+if (melyik==3) return S03("koltoi");  // OK
+if (melyik==4) return S04(); 		  // OK 						
+if (melyik==5) return S05("koltoi");  // OK
+if (melyik==6) return S06("koltoi");  // OK
+if (melyik==7) return S07("koltoi");  // OK
+if (melyik==8) return S08("koltoi");  // OK
+if (melyik==9) return S09("koltoi");  // OK
+if (melyik==10) return S10("koltoi"); // OK
+if (melyik==11) return S11(); 	      // OK, acceptable, no koltoi impl.
+if (melyik==12) return S12("koltoi"); // OK  	
+if (melyik==13) return S13("koltoi"); // OK, no koltoi impl.						
+if (melyik==14) return S14("koltoi"); // OK
+if (melyik==15) return S15("koltoi"); // OK
+if (melyik==16) return S16("koltoi"); // OK
+if (melyik==17) return S17("koltoi"); // OK
+if (melyik==18) return S18("koltoi"); // OK
+if (melyik==19) return S19("koltoi"); // OK
+if (melyik==20) return S20("koltoi"); // OK
+if (melyik==21) return S21("koltoi"); // OK
+if (melyik==22) return S22("koltoi"); // OK
+if (melyik==23) return S23("koltoi"); // OK
+if (melyik==24) return S24("koltoi"); // OK
+} else {
+if (melyik==1) return S01();
+if (melyik==2) return S02();
+if (melyik==3) return S03();
+if (melyik==4) return S04();
+if (melyik==5) return S05();
+if (melyik==6) return S06();
+if (melyik==7) return S07();
+if (melyik==8) return S08();
+if (melyik==9) return S09();
+if (melyik==10) return S10();
+if (melyik==11) return S11();
+if (melyik==12) return S12();
+if (melyik==13) return S13();
+if (melyik==14) return S14();
+if (melyik==15) return S15();
+if (melyik==16) return S16();
+if (melyik==17) return S17();
+if (melyik==18) return S18();
+if (melyik==19) return S19();
+if (melyik==20) return S20();
+if (melyik==21) return S21();
+if (melyik==22) return S22();
+if (melyik==23) return S23();
+if (melyik==24) return S24();
+//window.setTimeout(generateNew,5000);
+}
+};
+
+function S01(mod){
+
+var S1A = 
+[
+"x",
+"Ő soha",
+"Ő, aki",
+"Ő ugye",
+"Ő, noha",
+"Ő már",
+"Ő még",
+"Ő ide",
+"Ő oda",
+];
+
+var S1B = 
+[
+"x",
+" nem vár senkit,",
+" nem hív senkit,",
+" nem vár senkit,",
+" nem vár semmit,",
+" nem vár semmit,",
+" nem tűr senkit,",
+" nem lát senkit,",
+" nem tűr semmit,",
+" nem lát semmit,",
+" nem tűr senkit,",
+" nem félt senkit,",
+" nem tűr semmit,",
+" nem félt semmit,",
+];
+
+var S1C = 
+[
+"x",
+" nem vár,",
+" nem hív,",
+" nem vár,",
+" nem vár,",
+" nem vár,",
+" nem tűr,",
+" nem lát,",
+" nem tűr,",
+" nem lát,",
+" nem tűr,",
+" nem félt,",
+" nem tűr,",
+" nem félt,",
+];
+
+var S1D =
+[
+"x",
+" bár haza vágyik.",
+" úgyis a tűz győz.",
+" jöjjön a tűzvész.",
+" jöjjön az árvíz.",
+" mert citerázik,",
+" bár bicebóca,",
+" úgyse szeretné.",
+" mert vak az Isten!",
+" jöjjön akárki?!",
+" izzad a vágytól,",
+" szenved a vágytól,",
+" enged a vágynak,",
+"",
+];
+
+var S1E =
+[
+"x",
+" a házat tűz nyalogatja.",
+" elég aratásra a bánat.",
+" erőszakos állat az angyal.",
+" felkészült a magányra.",
+" fittyet hány a magányra.",
+" bánata puskagolyóbis.",
+" szempillája legördül.",
+" bajt aratott eleget már.",
+" késő már kalapozni.",
+" egy angyal az ágyon elég lesz.",
+" egy angol az ágyban elég lesz.",
+" felbosszantja az Istent,",
+" az árvíz elfedi lelkét.",
+" lelkét vágy nyalogatja.",
+];
+
+var S1F =
+[
+"x",
+"Indulatos",
+"Zsemleszemű",
+"Körtecsöcsű",
+"Bámulatos",
+"Elhanyagolt",
+"Elmebajos",
+"Ópiumos",
+"''Az'' kígyó",
+"Rapszodikus",
+"Hipnotikus",
+"Egzotikus",
+"Fókavadász",
+"Önkéntes",
+"Csókálló",
+"Fényűző",
+"Vérajakú",
+"Hitvalló",
+"Lábravaló",
+"Cirkalmas",
+"Asztalvég",
+"Századvég",
+"Isten! vak",
+"Elvben vak",
+"Ejnye, a kis",
+"Másodikos",
+"Harmadikos",
+"Jóalakú",
+"Haldokló",
+"Államügyész",
+];
+
+var S1G =
+[
+"x",
+" szobalány",
+" hajadon",
+" bajadér",
+" szűzlány",
+" csacsikánk",
+" delnő",
+" tündér",
+" grófnő",
+" kéjnő",
+" Marylin",
+" buja csaj",
+" buja nő",
+" buta nő",
+" buta csaj",
+" bacilus",
+" Pirikénk",
+" vasaló",
+" csataló",
+" pakoló",
+" vakoló",
+" magoló",
+" falevél",
+];
+
+var S1H =
+[
+"x",
+", combtól lombosodik.",
+" fékezi meg Szodomát.",
+" meztelenül lovagol.",
+"! álmában csapodár.",
+" álmában lefetyel.",
+" állva elélvez, űvölt!",
+", esténként berosál.",
+" lenne a bálnavadász?!",
+" kérdezi fel Szodomát.",
+", fönt hintázik a fán.",
+" csengeti föl Szodomát?",
+", Lóték lánya talán?",
+", hoppszaszadista zenész!",
+", mandarinogva mozog.",
+", mandarinogva kefél.",
+", mandarinogva baszik.",
+", mandarinogva lazsál.",
+", ő, a pucér szakadár.",
+" sír valahol. Fejen áll?",
+"! Lába között a pokol!",
+"! Combja tövén a pokol!",
+"! Kurva-soron vegetál.",
+", sírva az ágyra hajol.",
+", sírva a kádba merül.",
+" sírva a székre esik.",
+" húzza le most bugyiját.",
+" fogja le most a kezét!",
+" sírva kefél a padon.",
+" sírva baszik valahol.",
+", sír, nekiment a kanász.",
+" sír, hogy a ház kiürült.",
+", sír, elesett a füvön.",
+", sír, elesett a jegen.",
+", sír, elesett a havon.",
+", sír, megesett Szegeden.",
+", sír, megesett, anya lesz.",
+", vetkőző szerelem.",
+" sírva kefél a havon.",
+" sírva baszik. Bepiált!",
+" meztelenül borozik.",
+" szopja le ösztönösen.",
+" szopja le meztelenül.",
+" szopja le mágikusan.",
+" szopja le mesterien.",
+" szopja le bükkfa pöcsét.",
+];
+
+//1 strofa logic // checked OK // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, ranj,temp,spec;
+var sor1;
+
+if (mod=="koltoi") {
+//ranh = vel(29);
+//if (ranh<13) rani=vel(22);
+//if (ranh>12) rani=vel(10);
+}else{
+
+rana = vel(8);
+ranb = vel(13);
+//ranc if a<7 then left it out
+if (rana<7) {ranc=0
+}else{
+ranc=vel(5)}; 
+//ok until this
+spec=vel(2);
+if (spec=1) {
+//if specszam = 1 or specszam = 3 then
+
+if (rana<7){
+rand=ranb;
+}else{
+rand=ranc;};
+
+rane=vel(12);
+
+}else{
+//--if specszam = 2 or specszam = 4 then
+rang=vel(14)};
+
+
+};
+
+
+
+
+
+
+
+
+//put return after
+
+ranf = vel(16);//ok
+
+if (ranf<13) rang=vel(15);//ok
+if (ranf>12) rang=vel(10);//ok
+
+ranh = vel(45);//ok
+
+sor1 = S1A[rana] + S1B[ranb];
+if(ranc!=0) { sor1 = sor1 + S1C[ranc]} ;
+sor1 = sor1 + S1D[rand] + S1E[rane] + "</br>"+ S1F[ranf]+S1G[rang] +S1H[ranh];
+
+//sor1 = sor1 + "</br>OK S1" + " a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:"+ ranf +" g:"+ rang +" h:"+ ranh;
+return sor1;
+
+
+};
+
+// -----------------
+// strofa 2 strings
+
+function S02(mod){
+
+var S2A = 
+["x",
+"Ájtatos",
+"Illatos",
+"Kellemes",
+"Mámoros",
+"Bánatos",
+"Bágyatag",
+"Hírhedt",
+"Élveteg",
+"Esztelen",
+"Fesztelen",
+"Termetes",
+"Lángvörös",
+"Langymeleg",
+"Békés",
+"Régies",
+"Vérbajos",
+"Fegyveres",
+"Férfias",
+"Nőies",
+"Álmatag",
+"Párás",
+"Búskomor",
+"Bárgyú",
+"Disznó",
+"Hályogos",
+"Szent és",
+"Szédült",
+"Szektás",
+"Szőrmók",
+"Roggyant",
+"Rákvörös",
+"Petyhüdt",
+];
+
+var S2C =
+["x",
+" alkancellár",
+" éjjeli kurvafi,",
+" őstörténeti",
+" őszibaracksajt,",
+", állatimádó",
+" őrgróf mellett",
+" ámort űző",
+" asszony-igéző",
+" étvágyreklám,",
+" iskolamester az",
+" udvari náci az",
+" árnyékmedve az",
+" elvált ember az",
+];
+
+var S2D =
+["x",
+" angyal, az  angyali költő.",
+" őrgróf. Északi fenség.",
+" Isten az iskolapéldánk.",
+" őrvezető apukája.",
+" újságárus, a Marci.",
+" újságárus akárki.",
+" újságárus. Az  anyját!",
+" ártatlan bakafaszfej.",
+" esti király, fakabátos.",
+" esti király. Igaz ember?",
+];
+
+
+var S2E =
+["x",
+" percemberke. A rendőr.",
+" bunkó, bandita bunkó.",
+];
+
+var S2F =
+["x",
+"Északi",
+"Rozsdás",
+"Párás",
+"Békés",
+"Fésült",
+"Feldúlt",
+"Feltúrt",
+"Trójai",
+"Ápolt",
+"Felhős",
+"Golyvás",
+"Gyűrött",
+"Hajnali",
+"Csángó",
+"Szálkás",
+];
+
+
+var S2G =
+["x",
+" aknamezőn",
+" búzamezőn",
+" tintamezőn",
+" jéglegelőn",
+" nyeglegelőn",
+" bér-legelőn",
+" jégfövenyen",
+" hókupacon",
+" ráchomokon",
+" irkalapon",
+" kottalapon",
+" kéjfövenyen",
+" tarkalapon",
+];
+
+
+var S2H =
+["x",
+" pentameter viszi át.",
+" dallama-lombja a szél.",
+" tengerigó fütyörész.",
+" indul a szentek elé.",
+" sár maradéka virít.",
+" képzeli el Szodomát.",
+" ugródeszkalapál.",
+" félvér-kém csepürág.",
+" Dzsingisz kán pityereg.",
+" Bartók úr kicsapong.",
+];
+
+
+//2 strofa logic // checked OK // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, temp;
+var sor1;
+
+rana = vel(32);
+ranb = vel(24);
+ranc = vel(12);
+
+//rand
+if (ranb<21){
+rand=vel(10);
+temp=S2D[rand];
+}
+
+if (ranb>20){
+rane=vel(2);
+temp=S2E[rane];
+}
+
+ranf=vel(15);
+rang=vel(13);
+ranh=vel(10);
+
+sor1 = S2A[rana] + S2C[ranc] + temp + "</br>" + S2F[ranf] + S2G[rang] + S2H[ranh];
+
+//sor1 = sor1 + "</br>OK S2" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:"+ ranf +" g:"+ rang +" h:"+ ranh;
+return sor1;
+};
+
+function S03(mod){
+
+var S3A =
+["x",
+"Farkával-vel a",
+"Réztollával a",
+"Tíz ujjával a",
+"Nyelvével-val a",
+"Orrmányával a",
+"Kiskésével a",
+"Bicskájával a",
+"Vesszőjével a",
+"Tűzbotjával a",
+"Tíz körmével a",
+"Puszta kezével a",
+"Ujjabegyével a",
+"Farka hegyével a",
+"Álló fasszal a",
+"Nyelve hegyével a",
+"Szálka faszával a",
+"Szárnya hegyével a",
+"Puszta pöcsével a",
+"Fél tenyerével a",
+"Csorba pöcsével a",
+"Pálcájával a",
+"Puskájával a",
+"Kardja hegyével a",
+"Két ujjával a",
+];
+
+var S3B =
+["x",
+" szőrtulipán",
+" szextulipán",
+" puncivirág",
+" lánykikerics",
+" táskavirág",
+" kis pina-lyuk",
+" nedves szex",
+" szőr-korsó",
+" punci-gödör",
+"z asszony-kút",
+" szőrös cső",
+" szűz lábköz",
+" vén banya-segg",
+" szűzlány-segg",
+"z asszony-völgy",
+" szűzlány-völgy",
+" szűzlány-szex",
+" nedves edény",
+"  szőrös ülep",
+" szent picsa kút",
+];
+
+var S3C =
+["x",
+" peremén",
+" szélén",
+" kelyhén",
+" mélyén",
+" töviben",
+" partján",
+" résén",
+" selymén",
+" fövenyén",
+" fűjén",
+" ereszén",
+" mezején",
+" táján",
+" talaján",
+" parazsán",
+" papucsán",
+" sóján",
+" száján",
+];
+
+var S3D =
+["x",
+" bicebóklász.",
+" pamacsol-csal. ",
+" araszolgat. ",
+" pepecselgáncs. ",
+" haszonélvez. ",
+" hazaárul. ",
+" kaszinózik. ",
+" karikázik. ",
+" libikózik.  ",
+" muzsikálgat.  ",
+" ha világít, ",
+" kifogásol.",
+" hadirokkant.",
+" vizet áraszt.",
+" leukoplaszt.",
+" ametisztel.",
+" nevelőtiszt.",
+" repülőtiszt.",
+" pereputtyol.",
+" mire vágyik?",
+" mire számít?",
+" paradoxként.",
+" panamázik.",
+" sose táncolt.",
+" panamázik.",
+" magyaráz-ráz.",
+" vala. Ámen.",
+" megalázván.",
+" keseregvén.",
+" vezekel még.",
+" gurigázik.",
+" panamázik.",
+" lakomázik.",
+" citerázik.",
+" pepecsel-csal..",
+" ekeszarvaz.",
+" kivilágít. ",
+" beleállít.",
+" hazaszállít.",
+" lekopogtat.",
+" bevilágít. ",
+" taligázik.",
+" köszörülget.",
+];
+
+var S3E =
+["x",
+"Pálmák szárnya alatt",
+"Múzsák szárnya alatt",
+"Fecskék szárnya alatt",
+"Mária szárnya alatt",
+"Erzsike szárnya alatt",
+"Múzsák szárnya alatt",
+"Bokrok szárnya alatt",
+"Fészer szárnya alatt",
+"Múzsák talpa alatt",
+"Mária ágya alatt",
+"Erzsike ágya alatt",
+"Múzsák ágya alatt",
+"Angyalok ágya alatt",
+"Angyalok árnya alatt",
+"Pálmák árnya alatt",
+"Csillagok árnya alatt",
+"Múzsák árnya alatt",
+"Fecskék árnya alatt",
+"Mária kútja előtt",
+"Erzsike kútja előtt",
+"Mária háza előtt",
+"Erzsike háza előtt",
+"Mária kútja mögött",
+"Mária háza mögött",
+"Erzsike kútja mögött",
+"Erzsike háza mögött",
+"Elmebetenger alatt",
+"Pentameterpeszben",
+"Rágalomandulafán",
+"Rácegerespusztán",
+"Római strandfürdőn",
+"Párducbőr-heverőn",
+"Tőzsdei árfolyamon",
+];
+
+var S3F =
+["x",
+" vágyik a szoknya alá.",
+" táncol a, táncol a tűz.",
+" sör folyik őseiből.",
+" sör folyik érveiből.",
+" sör folyik álmaiból.",
+" vér folyik őseiből.",
+" vér folyik érveiből.",
+" vér folyik álmaiból.",
+" tűz folyik őseiből.",
+" tűz folyik érveiből.",
+" tűz folyik álmaiból.",
+" nyál folyik őseiből.",
+" nyál folyik érveiből.",
+" nyál folyik álmaiból.",
+", ó, homorú nyomoronc!",
+" tátika, mályva, pipacs.",
+" füstöl a kottapapír.",
+" füstöl a petrezselyem.",
+" füstöl a jogtudomány. ",
+" vágyik az inge alá.",
+" vágyik a lába közé.",
+" vágyik a térde közé.",
+" nyílik a rózsabokor.",
+" hűsöl a rőzse-szedő.",
+" lábravaló nélkül.",
+" lengemagyarban iszik.",
+" tüntet a pesti fiú.",
+" térdel a gazda-fiú.",
+" fürdik a szomszéd srác.",
+" játszik a szomszéd srác.",
+" fekszik a szomszéd srác.",
+" táncol a szomszéd srác.",
+" tüntet a szomszéd srác.",
+" szenved a szomszéd srác.",
+" alszik a szomszéd srác.",
+" füstöl a szomszéd srác.",
+" fürdik a szomszéd lány.",
+" játszik a nagy csöcsű lány.",
+" fekszik a nagy csöcsű lány.",
+" mosdik a nagy csöcsű lány.",
+" táncol a leprás lány.",
+" tüntet a szomszéd lány.",
+" szenved a copfos lány.",
+" csókol a pesti leány.",
+];
+
+// strofa 3 logic // checked ok // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf
+var sor1;
+
+if (mod=="koltoi") {
+
+rana = vel(24);
+ranb = vel(20);
+ranc = vel(18);
+rand = vel(43);
+
+rane = vel(33);
+ranf = vel(44);
+}else{
+rana = vel(24);
+ranb = vel(15);
+ranc = vel(13);
+rand = vel(30);
+
+rane = vel(33);
+ranf = vel(36);
+};
+
+sor1 = S3A[rana] + S3B[ranb] + S3C[ranc] + S3D[rand] + "</br>" + S3E[rane] + S3F[ranf];
+
+//sor1 = sor1 + "</br>OK S3" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf;
+
+return sor1;
+};
+
+
+function S04(mod){
+
+var S4A =
+["x",
+"Kuncog a",
+"Fekszik a",
+"Ágyban a",
+"Hűsöl a",
+"Ittas a",
+"Fázik a",
+"Izzad a",
+"Kérked a",
+"Játszik a",
+"Színlel a",
+"Csuklik a",
+"Pislog a",
+"Flancol a",
+"Alszik a",
+"Párzik a",
+"Prüszköl a",
+"Barna a",
+"Csámcsog a",
+"Flancol a",
+"Táncol a",
+"Henceg a",
+"Tapsol a",
+"Boldog a",
+"Csontos a",
+"Élvez a",
+];
+var S4B =
+["x",
+" kedves,",
+" nagylány,",
+" némber,",
+" drágám,",
+" lelkem,",
+" szépség,",
+" kislány,",
+" kis csaj,",
+" bűbáj,",
+" grófnő,",
+"z édes,",
+"z asszony,",
+"z úrnő,",
+
+
+];
+
+var S4C =
+["x",
+" nincs takarója,",
+" nincs bugyi rajta,",
+" nincs szoknyája,",
+" nincs pokróca,",
+" tompora nyitva,",
+" zoknija nincsen,",
+" ég a kabátja,",
+" lóg a kabátja,",
+" nyitva az ablak,",
+" nyitva a függöny,",
+" víz a ruhája,",
+" nincs mellénye,",
+" tárva ruhája,",
+" tárva kabátja,",
+" tárva a kincse,",
+" nyitva a kincse,",
+
+];
+
+var S4D =
+["x",
+" az inge",
+" a segge",
+" a melle",
+" a combja",
+" a térde",
+" a lába",
+" a húsa",
+" a háta",
+" a válla",
+" a bőre",
+" a karja",
+];
+
+var S4E =
+["x",
+" futótűz.",
+" kilátszik.",
+" világít.",
+" fehérlik.",
+" vöröslik.",
+" virágzik.",
+" tüzet fog.",
+" sugárzik.",
+" piroslik.",
+" aranylik.",
+" királyi.",
+" belobban.",
+" gyopárzik.",
+" szivárvány.",
+];
+
+var S4F =
+["x",
+"Rút",
+"Szép",
+"Ál",
+"Új",
+"Szent",
+"Szűz",
+"Vad",
+"Sós",
+"Skót",
+"Dísz",
+"Friss",
+"Mű",
+"Rőt",
+"Bő",
+"Disz",
+"Nagy",
+"Zord",
+"Zárt",
+];
+
+var S4G =
+["x",
+" tűz-",
+" víz-",
+" nap-",
+" láng-",
+" föld-",
+" hold-",
+" hó-",
+" jég-",
+" láz-",
+" vágy-",
+" csáb-",
+" hús-",
+];
+
+var S4H =
+["x",
+"ráf,",
+"pír,",
+"híd,",
+"gömb,",
+"rács,",
+"gönc,",
+"kóc,",
+"sánc,",
+"völgy,",
+"rét,",
+"folt,",
+"sérv,",
+"vár,",
+"hegy,",
+"domb,",
+"part,",
+];
+
+var S4I =
+["x",
+" kaszakő,",
+" gyalupad,",
+" gyufaszál,",
+" fakopács,",
+" csereföld,",
+" levegő,",
+" faluvég,",
+" melegágy,",
+" kavicságy,",
+" daragyöngy,",
+" kutyaól,",
+" kapualj,",
+" barikád,",
+" cirok-árny,",
+" elegáns,",
+" felemás,",
+" fali kép,",
+" heverő,",
+" legelő,",
+" nyaraló,",
+" farakás,",
+" bujakór,",
+" szakadék,",
+];
+
+var S4J =
+["x",
+" égő mandulafák.",
+" száraz kerti virág.",
+" szikkasztott bujaság.",
+" állókép, sokaság.",
+" vastaps és bumeráng.",
+" angyalszárny gomolyag.",
+" ős szodomás barikád.",
+" elsietett apaság.",
+" kolhozpénz, kapukulcs.",
+" felhőző csacsiság.",
+" száraz mandulafák.",
+" égő kerti virág.",
+" állókép, bujaság.",
+" vastaps és bujaság.",
+" ős szodomás bujaság.",
+" elsietett bujaság.",
+" kolhozpénz, bujaság.",
+" felhőző bujaság.",
+" angyalszárny sokaság.",
+" vastaps és sokaság.",
+" ős szodomás sokaság.",
+" kolhozpénz, sokaság.",
+" felhőző sokaság.",
+" állókép, bumeráng.",
+" elsietett bumeráng.",
+" kolhozpénz, bumeráng.",
+" felhőző bumeráng.",
+" angyalszárny bumeráng.",
+" ős szodomás gomolyag.",
+" felhőző gomolyag.",
+" vastaps és gomolyag.",
+" kolhozpénz, gomolyag.",
+" elsietett gomolyag.",
+" állókép, barikád.",
+" elsietett barikád.",
+" kolhozpénz, barikád.",
+" vastaps és barikád.",
+" felhőző barikád.",
+" vastaps és kapukulcs.",
+" elsietett kapukulcs.",
+" állókép, kapukulcs.",
+" ős szodomás apaság.",
+" felhőző apaság.",
+" állókép, apaság.",
+" kolhozpénz, apaság.",
+" vastaps és apaság.",
+" vastaps és csacsiság.",
+" kolhozpénz, csacsiság.",
+" állókép, csacsiság.",
+" ős szodomás csacsiság.",
+" elsietett csacsiság.",
+];
+
+
+// strofa 4 logic // checked ok  // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, ranj
+var sor1;
+
+rana = vel(25);
+ranb = vel(13);
+ranc = vel(16);
+rand = vel(11);
+rane = vel(14);
+
+ranf = vel(18);
+rang = vel(12);
+ranh = vel(16);// orig bug javitva - original 17 de csak 16 tetel
+rani = vel(23);
+ranj = vel(51);
+
+
+sor1 = S4A[rana] + S4B[ranb] + S4C[ranc] + S4D[rand] + S4E[rane] + "</br>" + S4F[ranf] + S4G[rang] + S4H[ranh] + S4I[rani] + S4J[ranj];
+
+//sor1 = sor1 + "</br>OK S4" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:"+ rang +" h:"+ ranh +" i:"+ rani +" j:"+ ranj;
+return sor1;
+}
+
+function S05(mod){
+
+var S5A = 
+["x",//1/12
+"Nincs Isten! ",
+"Isten nincs! ",
+"Talpra magyar! ",
+"Jó Uram, Ó! ",
+"Ó Big Bang! ",
+"Krisztus Urunk! ",
+"Hé Lucifer! ",
+"Ó magas ég! ",
+"Ó szent ég! ",
+"Szent Habakuk! ",
+"Szent Isten! ",
+"Kurva világ! ",
+];
+
+var S5B =
+["x",//2/15
+"hőforrás volt",
+"művégtag volt",
+"sófegyver volt",
+"vaktöltény volt",
+"száraz gőz volt",
+"vizenyős láp volt",
+"nedves föld volt",
+"gőzfátyol volt",
+"szexpótló volt",
+"vízágyú volt",
+"nedves rongy volt",
+"keretes kép volt",
+"hófúvás volt",
+"gépfegyver volt",
+"ima-tenger volt",
+];
+
+
+
+var S5C =
+["x",//3 /10
+" a hitünk",
+" az eszünk",
+" a szavunk",
+" az igénk",
+" lelkünk",
+" szívünk",
+" üdvünk",
+" a remény",
+" a jövőnk",
+" vágyunk",
+];
+
+var S5D =
+["x",//4/17
+" elejétől",
+" elejétől",
+" elejétől",
+" Szodomától",
+", eredendőn",
+", eredendőn",
+", eredendőn",
+", eredendőn",
+", eredendőn",
+" Salamontól",
+", velejéig",
+", velejéig",
+", velejéig",
+", velejéig",
+", közepétől",
+" születéstől",
+" Jeruzsálem",
+];
+
+var S5E =
+["x",//5/22
+"fogva.",
+"kezdve.",
+"gyenge.",
+"kezdve.",
+"gyenge.",
+"renyhe.",
+"ronda.",
+"renyhe.",
+"árva.",
+"kezdve.",
+"sáros.",
+"szőrös.",
+"szürke.",
+"ronda.",
+"ronda.",
+"fogva.",
+"óta.",
+"árva.",
+"szürke.",
+"ronda.",
+"renyhe.",
+"sáros.",
+];
+
+var S5F =
+["x",//6/18
+" A víz elfolyt.",
+" A tűz kialudt.",
+" A láz lelohadt.",
+" A kéj megfúlt.",
+" A víz leapadt.",
+" A tél lerohant.",
+" A nyár lefutott.",
+" A fény megfúlt.",
+" A fény elapadt.",
+" A tűz lelohadt.",
+" A víz leapadt.",
+" A kéj elapadt.",
+" A kéj lelohadt.",
+" A kéj kilyukadt.",
+" A könny elapadt.",
+" A könny elfolyt.",
+" A nyár lelohadt.",
+" A nyár megfúlt.",
+];
+
+var S5G =
+["x",//7/32
+" Fázunk",
+" Félünk",
+" Tűrűnk",
+" Élünk",
+" Porlunk",
+" Döglünk",
+" Égünk",
+" Vedlünk",
+" Hajlunk",
+" Siklunk",
+" Csuklunk",
+" Kéklünk",
+" Mállunk",
+" Pállunk",
+" Omlunk",
+" Feslünk",
+" Botlunk",
+" Fűlünk",
+" Bűzlünk",
+" Habzunk",
+" Rajzunk",
+" Párzunk",
+" Vérzünk",
+" Porzunk",
+" Fekszünk",
+" Alszunk",
+" Úszunk",
+" Kúszunk",
+" Sírunk",
+" Pörlünk",
+" Halkan",
+" Dacból",
+];
+
+var S5H =
+["x",//8/12
+" védtelenül.",
+" vadkacsaként.",
+" vadlibaként.",
+" elvtelenül. ",
+" meztelenül.",
+" szótalanul.",
+" szüntelenül.",
+" próbabaként.",
+" végtelenül.",
+" parttalanul.",
+" hasztalanul.",
+" piszkafaként.",
+];
+
+// strofa 5 logic // checked ok // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh;
+var sor1;
+
+
+
+if (mod=="koltoi") {
+rana = vel(12);
+ranb = vel(15);
+ranc = vel(10);
+rand = vel(17);
+
+rane = vel(22);
+ranf = vel(18);
+rang = vel(32);
+ranh = vel(12);
+}else{
+rana = vel(11);
+ranb = vel(15);
+ranc = vel(10);
+rand = vel(17);
+
+rane = rand;//itt mintha ujra lenne hasznalva az ertek
+ranf = vel(18);
+rang = vel(29);
+ranh = vel(11);
+};
+
+sor1 = S5A[rana] + S5B[ranb] + S5C[ranc] + S5D[rand] + "</br>" + S5E[rane] + S5F[ranf]+ S5G[rang]+S5H[ranh];
+
+//sor1 = sor1 + "</br>OK S5" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:" + rang+" h:" + ranh;
+
+return sor1;
+
+}
+function S06(mod){
+
+var S6A =
+["x",//1
+"Engem",
+"Téged",
+"Minket",
+"Tudd, hogy",
+"Lásd, hogy",
+"Féld, hogy",
+"Véld, hogy",
+"Hidd, hogy",
+"Jó, ha",
+"Fénye",
+"Lénye",
+"Árnya",
+];
+
+var S6B =
+["x",//2
+" az én ellenségemtől",
+" az ő ellenségétől",
+" akárki szavától csendben",
+" oroszlán szárnyaival még",
+" erénytől, lánytól, pénztől",
+" a szex mézes gyönyörétől",
+" az irgalmasságtól még",
+" a rossztól, minden rossztól",
+" az én nyomorúságomtól",
+" a vétkek legvétkétől",
+" erénnyel, lánnyal, pénzzel",
+
+
+];
+var S6C =
+["x",//3
+" megszabadíthat.",
+" felszabadíthat.",
+" elszabadíthat.",
+" megmenekíthet.",
+" elbarikádol.",
+" elmenekíthet,",
+" elkülöníthet.",
+" elhidegíthet.",
+" elkeresíthet.",
+" elszigetelhet.",
+" elregulálhat.",
+" megbabonáztat.",
+" ellakatolhat.",
+" megbizseregtet.",
+" elbizseregtet.",
+" megkeseregtet.",
+" megbetegíthet.",
+" elbetegíthet.",
+
+" elgomolyogtat.",
+" elkopulálhat.",
+" elpanamázhat.",
+" megkarimáztat.",
+" elbetegíthet,",
+" elkalyibázhat",
+" elboronálhat",
+" elkicsodázhat",
+" eltaligázhat",
+" felrafiázhat",
+" megrafiázhat",
+" elrafiázhat",
+" elfifikázik",
+" ellogikázik",
+" elmuzsikálhat.",
+" eldarabolhat",
+" elkupolázhat",
+" elmazsolázhat",
+" elfuvolázhat",
+" elfurolyázik",
+" eldatolyázik.",
+" elkocsonyásít.",
+" elfakutyáztat.",
+" elhegedülhet.",
+" elmakacsolhat.",
+" elkulacsolhat.",
+" elszivacsolhat.",
+" elszegecselhet.",
+" eldikicselhet.",
+" elpaticsolhat.",
+" elmaradoztat.",
+" elijedeztet.",
+" elrepedeztet.",
+" felrepedeztet.",
+" elepedeztet.",
+" megmerevíthet.",
+" kimerevíthet.",
+" elmerevíthet,",
+" megtizedelhet.",
+" megrövidíthet.",
+" elrececézhet.",
+" elheherészhet.",
+" felszalagoltat.",
+" elcsomagolhat.",
+" összefaraghat.",
+" eltekeregtet.",
+" elcsipereghet.",
+" elnyomorithat",
+" elnoszogathat",
+" elkaparinthat.",
+" megkeseríthet.",
+" elmaradoztat.",
+
+
+];
+
+var S6D =
+["x",//4
+"Ülj a csalánba",
+"Ülj a gödörbe",
+"Ülj a verembe",
+"Ülj a homokra",
+"Bújj a gödörbe",
+"Bújj a szobába",
+"Bújj az akolba",
+"Bújj a karámba",
+"Bújj a verembe",
+"Hágj a hajóra",
+"Hágj a csalánba",
+"Hágj a fövenyre",
+"Hágj a homokra",
+"Menj a hajóra",
+"Menj a mezőre",
+"Menj a szobába",
+"Menj az öbölbe",
+"Menj az akolba",
+"Menj a csalánba",
+"Menj a karámba",
+"Menj a fövenyre",
+"Menj a laposba",
+"Menj a verembe",
+"Menj a terembe",
+"Menj a határba",
+"Menj a homokra",
+"Lépj a gödörbe",
+"Lépj a szobába",
+"Lépj az akolba",
+"Lépj a csalánba",
+"Lépj a karámba",
+"Lépj a fövenyre",
+"Lépj a verembe",
+"Lépj a terembe",
+"Lépj a homokra",
+"Állj a gödörbe",
+"Állj a szobába",
+"Állj az öbölbe",
+"Állj az akolba",
+"Állj a csalánba",
+"Állj a karámba",
+"Állj a fövenyre",
+"Állj a verembe",
+"Állj a terembe",
+"Állj a homokra",
+"Nézz a gödörbe",
+"Nézz a szobába",
+"Nézz az akolba",
+"Nézz a csalánra",
+"Nézz a karámba",
+"Nézz a verembe",
+"Nézz a fövenyre",
+"Nézz a terembe",
+"Nézz a homokra",
+"Fuss a mezőre",
+"Fuss a szobába",
+"Fuss az öbölbe",
+"Fuss az akolba",
+"Fuss a csalánba",
+"Fuss a karámba",
+"Fuss a fövenyre",
+"Fuss a laposba",
+"Fuss a verembe",
+"Fuss a határba",
+"Kússz a hajóra",
+"Kússz a gödörbe",
+"Kússz a szobába",
+"Kússz az akolba",
+"Kússz a csalánba",
+"Kússz a fövenyre",
+"Kússz a verembe",
+"Kússz a terembe",
+"Kússz a homokra",
+"Húzz a homokra",
+"Húzz a laposba",
+"Húzz a határba",
+"Húzz a mezőre",
+"Húzz az öbölbe",
+"Jöjj a hajóra",
+"Jöjj a gödörbe",
+"Jöjj a mezőre",
+"Jöjj a szobába",
+"Jöjj az öbölbe",
+"Jöjj az akolba",
+"Jöjj a csalánba",
+"Jöjj a karámba",
+"Jöjj a fövenyre",
+"Jöjj a laposba",
+"Jöjj a verembe",
+"Jöjj a terembe",
+"Jöjj a határba",
+"Jöjj a homokba",
+"Csússz a gödörbe",
+"Csússz a csalánba",
+"Csússz a verembe",
+"Csússz a homokra",
+"Csússz a fövenyre",
+"Mássz a hajóra",
+"Mássz a karámba",
+"Mássz a verembe",
+"Mássz a terembe",
+"Mássz a szobába",
+"Mássz a fövenyre",
+"Mássz a gödörbe",
+"Szarj a hajóra",
+"Szarj a szobába",
+"Szarj a gödörbe",
+"Szarj az akolba",
+"Szarj a csalánba",
+"Szarj a karámba",
+"Szarj a fövenyre",
+"Szarj a verembe",
+"Szarj a terembe",
+"Szarj a homokra",
+"Menj",
+"Lépj",
+"Állj",
+"Nézz",
+"Fuss",
+"Kússz",
+"Húzz",
+"Lökj",
+"Jöjj",
+"Csússz",
+"Mássz",
+"Bújj",
+"Ülj",
+"Hágj",
+"Térj",
+"Tarts",
+"Lökj a gödörbe",
+"Lökj a verembe",
+"Lökj a terembe",
+"Lökj a homokra",
+"Lökj a fövenyre",
+"Lökj a szobába",
+];
+var S6E =
+["x",
+" a hajóra",
+" a gödörbe",
+" a mezőre",
+" a szobába",
+" az öbölbe",
+" az akolba",
+" a csalánba",
+" a karámba",
+" a fövenyre",
+" a laposba",
+" a verembe",
+" a terembe",
+" a határba",
+" a homokra",
+
+];
+var S6F =
+["x",
+" legény!",
+" leány!",
+" dudás!",
+" kaszás!",
+" fiú!",
+" barát!",
+" király!",
+" vagány!",
+" pogány!",
+" lotyó!",
+" öcsém!",
+
+" bohóc!",
+" tanonc!",
+" babám!",
+" tanár!",
+" tatár!",
+" huszár!",
+" tahó!",
+" titán!",
+" palóc!",
+" vadóc!",
+" kolonc!",
+" tolonc!",
+" kovács!",
+" takács!",
+" magány!",
+" cigány!",
+" talán...",
+"  csatár!",
+" faarc!",
+" lidérc!",
+
+
+];
+var S6G =
+["x",
+" S maszturbálj, muzsikálj!",
+" Maszturbálj s vezekelj!",
+" S maszturbálj, meditálj!",
+" S maszturbálj, könyörögj!",
+" S maszturbálj, hegedülj!",
+" Maszturbálj s bizakodj!",
+" S maszturbálva esengj!",
+" S maszturbálva zenélj!",
+" S négykézláb vezekelj!",
+" S négykézláb bizakodj!",
+" Négykézláb vezekelj!",
+" Négykézláb bizakodj!",
+" Négykézláb keseregj!",
+" S négykézláb keseregj",
+" S négykézláb kiabálj!",
+" S négykézláb muzsikálj!",
+" S négykézláb könyörögj!",
+" S négykézláb meditálj!",
+" S négykézláb hegedülj!",
+" És térdelj, vezekelj!",
+" És térdelj, bizakodj!",
+" És térdelj, keseregj!",
+" És térdelj, s kiabálj!",
+" És térdelj, könyörögj!",
+" És térdelj, s meditálj!",
+" És térdelvezekelj!",
+" És térdelj s muzsikálj!",
+" S térdreborulva zenélj!",
+" S térdreborulva esengj!",
+" S térdreomolva zenélj!",
+" S térdreomolva esengj!",
+" S térdrelerogyva zenélj!",
+" S térdrelerogyva esengj!",
+" S vasszögeken vezekelj!",
+" S vasszögeken keseregj!",
+" S vasszögeken meditálj!",
+" S vasszögeken hegedülj!",
+" S vasszögeken fuvolázz!",
+" S vasszögeken furulyázz!",
+" S térdepelőn vezekelj!",
+" S térdepelőn keseregj!",
+" S térdepelőn meditálj!",
+" S térdepelőn hegedülj!",
+" S térdepelőn fuvolázz!",
+" És szívből bizakodj!",
+" És szívből vezekelj!",
+" És szívből keseredj!",
+" És szívből muzsikálj!",
+" És szívből könyörögj!",
+" És szívből meditálj!",
+" És szívből hegedülj!",
+" És szívből fuvolázz!",
+" És muzsikálj, muzsikálj!",
+" És muzsikálj, bizakodj!",
+" És muzsikálj, vezekelj!",
+" És muzsikálj, keseregj!",
+" És muzsikálj, könyörögj!",
+" És muzsikálj, meditálj!",
+" És fuvolázz, fuvolázz!",
+" És fuvolázz, bizakodj!",
+" És fuvolázz, vezekelj!",
+" És fuvolázz, keseregj!",
+" És fuvolázz, muzsikálj!",
+" És fuvolázz, könyörögj!",
+" És fuvolázz, meditálj!",
+" És furulyázz, furulyázz!",
+" És furulyázz, bizakodj!",
+" És furulyázz, vezekelj!",
+" És furulyázz, keseregj!",
+" És furulyázz, könyörögj!",
+" És furulyázz, meditálj!",
+" És gomolyogj, gomolyogj!",
+" És gomolyogj, meditálj!",
+" És gomolyogj, bizakodj!",
+" És gomolyogj, vezekelj!",
+" És gomolyogj, könyörögj!",
+" És gomolyogj, meditálj!",
+" És vezekelj, vezekelj!",
+" És vezekelj, bizakodj!",
+" És vezekelj, keseregj!",
+" És vezekelj, muzsikálj!",
+" És vezekelj, könyörögj!",
+" És vezekelj, meditálj!",
+" És vezekelj, hegedülj!",
+" És vezekelve zenelj!",
+" És vezekelve esengj!",
+" És bizakodj, bizakodj!",
+" És bizakodj, vezekelj!",
+" És bizakodj, meditálj!",
+" És bizakodj, könyörögj!",
+" És bizakodj, muzsikálj!",
+" És bizakodj, hegedülj!",
+" És keseregj, keseregj!",
+" És keseregj, vezekelj!",
+" És keseregj, muzsikálj!",
+" És keseregj, könyörögj!",
+" És keseregj, meditálj!",
+" És könyörögj, könyörögj!",
+" És könyörögj, bizakodj!",
+" És könyörögj, vezekelj!",
+" És könyörögj, keseregj!",
+" És könyörögj, muzsikálj!",
+" És könyörögj, hegedülj!",
+" És könyörögj, meditálj!",
+" És meditálj, meditálj!",
+" És meditálj, bizakodj!",
+" És meditálj, vezekelj!",
+" És meditálj, keseregj!",
+" És meditálj, muzsikálj!",
+" És meditálj, könyörögj!",
+" És meditálj, hegedülj!",
+" És meditálva esengj!",
+" És meditálva zenélj!",
+" És könyörögve esengj!",
+" És könyörögve zenélj!",
+" És bizakodj, térdelj!",
+" És vezekelj, térdelj!",
+" És keseregj, térdelj!",
+" És muzsikálj, térdelj!",
+" És könyörögj, térdelj!",
+" És meditálj, térdelj!",
+" És muzsikálj,",
+" És fuvolázz,",
+" És furulyázz,",
+" És hegedülj,",
+" És gomolyogj,",
+" És szívből",
+" És vezekelj,",
+" És provokálj,",
+" És bizakodj,",
+" És jubilálj,",
+" Asszimilálj,",
+" Gesztikulálj,",
+" Inficiálj,",
+" És revelálj,",
+" És gazsulálj,",
+" És valahol",
+" És mazsolázz,",
+
+];
+
+//csak akkor ha h > 121
+var S6H =
+["x",
+" bizakodj!",
+" vezekelj!",
+" keseregj!",
+" kiabálj!",
+" provokálj!",
+" muzsikálj!",
+" gazsulálj!",
+" könyörögj!",
+" meditálj!",
+" agitálj!",
+" hegedülj!",
+" rezonálj!",
+];
+
+//strofa 6 logic // checked ok // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(12);
+ranb = vel(11);
+ranc = vel(70);
+
+rand = vel(136);
+if ((rand>114)&&(rand<131)){
+rane = vel(14)}else{rane=0};
+
+ranf = vel(31);
+rang = vel(138);
+if (rang>121) {
+ranh = vel(12)}else{ranh=0}
+}else{
+rana = vel(12);
+ranb = vel(11);
+ranc = vel(18);
+
+rand = vel(114);
+rane = 0;
+ranf = vel(11);
+rang = vel(115);
+ranh = 0;
+
+};
+
+sor1 = S6A[rana] + S6B[ranb] + S6C[ranc] + "</br>" + S6D[rand]
+if (rane!=0){sor1=sor1+ S6E[rane]}
+sor1 =  sor1 + S6F[ranf]+S6G[rang];
+if (ranh!=0){sor1=sor1+ S6H[ranh]}
+
+
+//sor1 = sor1 + "</br>OK S6" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:" + rang +" h:" + ranh 
+
+return sor1;
+
+
+}
+function S07(mod){
+
+var S7A =
+["x",
+"Ánizstól",
+"Törvénytől",
+"Rossz bortól",
+"Borszesztől",
+"Lányszagtól",
+"Asszonytól",
+"Bosszútól",
+"Szégyentől",
+"Átoktól",
+"Méregtől",
+"Féltéstől",
+"Bánatitól",
+
+];
+
+var S7B =
+["x",
+" berekedt",
+" elaszott",
+" részeg",
+" berugott",
+" bepiált",
+" beszeszelt",
+" megesett",
+" kiborult",
+" lekonyult",
+" kifacsart",
+" spicces",
+" kábult",
+
+];
+
+var S7C =
+["x",
+" sámán,",
+" pincér,",
+" költő,",
+" szobrász,",
+" festő,",
+" Adonisz,",
+" Hermész,",
+" honvéd,",
+" rendőr,",
+" rabló,",
+" vendég,",
+" jött-ment,",
+" zászlós,",
+" portás,",
+" postás,",
+" veterán,",
+" kocsisunk,",
+" kapusunk,",
+
+];
+
+var S7D =
+["x",
+" izzadva",
+" átkozva",
+" vétkezve",
+" titkolva",
+" bűnhődve",
+" fölsírva",
+" röstelve",
+" szalutálva",
+" szemetelve",
+" kacarászva",
+" dudorászva",
+" betakarva",
+" kitakarva",
+" letakarva",
+
+
+];
+
+var S7E =
+["x",
+" köszöntlek.",
+" kereslek.",
+" szeretlek.",
+" szorítlak.",
+" tagadlak.",
+" tegezlek.",
+" szapullak.",
+" püföllek.",
+" perellek.",
+" dicsérlek. ",
+" leszóllak.",
+" lefoglak.",
+" legyűrlek.",
+" megintlek.",
+" röhöglek.",
+" segítlek.",
+" követlek.",
+" taposlak.",
+" vezetlek.",
+" vigyázlak.",
+" imádlak.",
+
+];
+
+var S7F =
+["x",
+"Emberi",
+"Isteni",
+"Szellemi",
+"Majdani",
+"Tegnapi",
+"Holnapi",
+"Ünnepi",
+"Látod-e?! –",
+"Hallod-e?! –",
+"Érzed-e?! –",
+"Érted-e?! –",
+"Isteni",
+"Egykori",
+
+
+];
+
+var S7G =
+["x",
+" megmentőnk",
+" bélpoklunk",
+" védernyőnk",
+" védőszárny",
+" megváltónk",
+" kármentőnk",
+" ügyvezetőnk",
+" félelmünk",
+" izgalmunk",
+" elmebajunk",
+" gyógytükrünk",
+" új babonánk",
+" megtartónk",
+
+];
+
+var S7H =
+["x",
+" és temetőnk",
+" és tulipán",
+" és kalodánk",
+" és palotánk",
+" és pagodánk",
+" és tutajunk",
+" és aranyunk",
+" és menedék",
+" és uzsoránk",
+" és örömünk",
+" és ligetünk",
+" és pinaszőr",
+" és ararát",
+" és temető",
+
+];
+
+var S7I =
+["x",
+" a szavad.",
+" a kezed.",
+" az eszed.",
+" a hajad.",
+" a szemed.",
+" a magány.",
+" a közöny.",
+" a nyomor.",
+" a pokol.",
+" a tüzed.",
+" a mocsár.",
+" a korán.",
+" a pecsét.",
+
+];
+
+//strofa 7 logic // checked ok// checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, ranj,temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(12);
+ranb = vel(12);
+ranc = vel(18);
+rand = vel(14);
+rane = vel(21);
+ranf = vel(13);
+rang = vel(13);
+ranh = vel(14);
+rani = vel(13);
+}else{
+rana = vel(12);
+ranb = vel(12);
+ranc = vel(18);
+rand = vel(14);
+rane = vel(20);
+
+ranf = vel(13);
+rang = vel(13);
+ranh = vel(11);
+rani = vel(10);
+};
+
+sor1 = S7A[rana] + S7B[ranb] + S7C[ranc] + S7D[rand] + S7E[rane] + "</br>" + S7F[ranf]+ S7G[rang] + S7H[ranh] + S7I[rani];
+
+//sor1 = sor1 + "</br>OK S7" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:" + rang +" h:" + ranh +" i:" + rani;
+
+return sor1;
+
+
+}
+function S08(mod){
+
+var S8A = 
+["x",
+"Lásd, aki",
+"Ő, aki",
+"Nézd, aki",
+"Tudd, aki",
+"Lám, aki",
+"Ó, aki",
+"Már aki",
+"Mert aki",
+"Íme, ki",
+"Mind, aki",
+
+
+];
+
+var S8B = 
+["x",
+" tűzzel",
+" szőrrel",
+" nővel",
+" lánnyal",
+" szűzzel",
+" csajjal",
+" hölggyel",
+" csókkal",
+" bókkal",
+" szexszel",
+" vízzel",
+" vassal",
+" kővel",
+" tűvel",
+" hóval",
+" kénnel",
+
+
+];
+
+var S8C = 
+["x",
+" dőzsöl,",
+" fekszik,",
+" játszik,",
+" társul,",
+" táncol,",
+" tervez,",
+" tá-tá,",
+" pitykéz,",
+" csörtet,",
+" bütyköl,",
+" flancol,",
+" piszmog,",
+" henceg,",
+" kérked,",
+" tesped",
+" döglik",
+
+
+];
+
+var S8D = 
+["x",
+" tűzzel",
+" szőrrel",
+" nővel",
+" lánnyal",
+" szűzzel",
+" csajjal",
+" hölggyel",
+" csókkal",
+" bókkal",
+" szexszel",
+" vízzel",
+" vassal",
+" kővel",
+" tűvel",
+" hóval",
+" kénnel",
+
+];
+
+var S8E = 
+["x",
+" dőzsöl",
+" fekszik",
+" játszik",
+" társul",
+" táncol",
+" tervez",
+" csörtet",
+" bütyköl",
+" flancol",
+" piszmog",
+" henceg",
+" kérked",
+" tesped",
+" döglik",
+
+];
+
+var S8F = 
+["x",
+" egész nap,",
+" ez egyszer,",
+" ad acta,",
+" akárhol,",
+" akárhogy,",
+" először,",
+", akármit!,",
+" egy évig,",
+" egy órát,",
+" ezentúl,",
+" azonnal,",
+" erővel,",
+" a fűben,",
+" a réten,",
+" a gazban,",
+" a lócán,",
+" az ágyban,",
+
+];
+
+var S8G = 
+["x",
+"sírba",
+"ágyra",
+"földre",
+"jégre",
+"hóba",
+"porba",
+"tűzbe",
+"fűre",
+"gyepre",
+"tönkre",
+"holtra",
+
+];
+
+var S8H = 
+["x",
+" sodorja",
+" borítja",
+" szorítja",
+" lapítja",
+" tapodja",
+" taszítja",
+" cibálja",
+" emészti",
+" veszejti",
+" darálja",
+" röpíti",
+" okítja",
+" emészti",
+" veszejti",
+" csavarja",
+
+];
+
+var S8I = 
+["x",
+" a szesz.",
+" a bor.",
+" a sör.",
+" a pénz.",
+" a steksz.",
+" a kéj.",
+" az éj.",
+" a gőg.",
+" a félsz.",
+" a frász.",
+" a bűn.",
+" magát.",
+" eszét.",
+" fejét.",
+" faszát.",
+" fülét.",
+" szemét.",
+" kezét.",
+
+];
+
+var S8J = 
+["x",
+" Sírba",
+" Ágyra",
+" Földre",
+" Jégre",
+" Hóba",
+" Porba",
+" Tűzbe",
+" Fűre",
+" Gyepre",
+" Tönkre",
+" Holtra",
+
+];
+
+var S8K = 
+["x",
+" sodorja",
+" borítja",
+" szorítja",
+" lapítja",
+" tapodja",
+" taszítja",
+" cibálja",
+" emészti",
+" veszejti",
+" darálja",
+" röpíti",
+" okítja",
+" emészti",
+" veszejti",
+" csavarja",
+
+];
+
+var S8L = 
+["x",
+" a szesz.",
+" a bor.",
+" a sör.",
+" a pénz.",
+" a steksz.",
+" a kéj.",
+" az éj.",
+" a gőg.",
+" a félsz.",
+" a frász.",
+" a bűn.",
+" magát.",
+" eszét.",
+" fejét.",
+" faszát.",
+" fülét.",
+" szemét.",
+" kezét.",
+
+
+];
+
+//strofa 8 logic // checked ok // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, ranj, rank, ranl, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(10);
+ranb = vel(16);
+ranc = vel(16);
+rand = vel(16);
+rane = vel(14);
+ranf = vel(17);
+
+rang = vel(11);
+ranh = vel(15);
+rani = vel(18);
+ranj = vel(11);
+rank = vel(15);
+ranl = vel(18);
+}else{
+rana = vel(10);
+ranb = vel(10);
+ranc = vel(14);
+rand = vel(10);
+rane = vel(14);
+ranf = vel(16);
+
+rang = vel(11);
+ranh = vel(10);
+rani = vel(11);
+ranj = vel(11);
+rank = vel(10);
+ranl = vel(11);
+};
+
+sor1 = S8A[rana] + S8B[ranb] + S8C[ranc] + S8D[rand] + S8E[rane] + S8F[ranf] + "</br>" + S8G[rang] + S8H[ranh] + S8I[rani] + S8J[ranj] + S8K[rank] + S8L[ranl];
+
+
+//sor1 = sor1 + "</br>OK S8" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:" + rang +" h:" + ranh +" i:" + rani +" j:" + ranj +" k:" + rank +" l:" + ranl;
+
+return sor1;
+}
+
+function S09(mod){
+
+var S9A = 
+["x",
+"Ételed",
+"Életed",
+"Álmaid",
+"Terveid",
+"Vágyaid",
+"Mondatod",
+"Gondjaid",
+"Munkád",
+"Műveid",
+"Verseid",
+"Kincseid",
+"Napjaid",
+"Nászaid",
+"Éjeid",
+"Szózatod",
+"Bánatod",
+
+];
+
+var S9B = 
+["x",
+" elmúlván",
+" alkonya jő,",
+" estéjén",
+" őszén, ó,",
+" elszórván",
+" elveszvén",
+" eltűnvén",
+" elmúltán",
+" elhülvén",
+" elhullván",
+" elhalván",
+" urnáján",
+" eltörvén",
+" elszórván",
+" alján, ó, ",
+" árkából",
+" legvégén",
+" óráján",
+" ápolván",
+" nyugtán, ó,",
+" végeztén",
+
+];
+
+var S9C = 
+["x",
+" haragot",
+" örömöt",
+" mérget",
+" vágyat",
+" álmot",
+" kedvet",
+" zamatot",
+" mámort",
+" üdvöt",
+" szikrát",
+" vidulást",
+" nevetést",
+" kacagást",
+" pezsgőt",
+" tokajit",
+" ser-italt",
+
+];
+
+var S9D = 
+["x",
+" kebeledbe",
+" szívedbe",
+" lelkedbe",
+" szemeidbe",
+" szavaidba",
+" versedbe",
+" strófádba",
+" soraidba",
+" levegődbe",
+" palotádba",
+" ten öledbe",
+" bordádra",
+
+];
+
+var S9E = 
+["x",
+" ne lökj már,",
+" ne hozz már,",
+" ne tégy már,",
+" ne zúdíts,",
+" ne önts már,",
+" ne loccsancs,",
+" ne löttyints,",
+" ne fröccsencs,",
+" ne lódíts,",
+" ne csorgass,",
+" ne forralj,",
+
+];
+
+var S9F = 
+["x",
+"Bajkeverő",
+"Rosszakaró",
+"Ködkavaró",
+"Vajh, szomorú",
+"Kedvaszaló",
+"Szarkavaró",
+"Mert keserű",
+"Mert savanyú",
+"Mert szomorú",
+"Mert elaszott",
+"Összeaszott",
+"Összeaszalt",
+"Rosszul aszalt",
+"Megszomorult",
+"Megsavanyult",
+"Elmeszesült",
+"Megmeredő",
+"Elrohadó",
+"Kővé vált",
+"Összelapult",
+"Összeesett",
+
+];
+
+var S9G = 
+["x",
+" szívnek",
+" szájnak",
+" észnek",
+" szónak",
+" nyelvnek",
+" hangnak",
+" szentnek",
+" arcnak",
+" kannak",
+" pasinak",
+" pulinak",
+" csacsinak",
+" faszinak",
+" daginak",
+" gurunak",
+" mukinak",
+" nőnek",
+" janinak",
+
+];
+
+var S9H = 
+["x",
+" kedvre derülni",
+" kedvre hevülni",
+" kedvre vidulni",
+" kedvbe borulni",
+" kedvre virulni",
+" borba borulni",
+" borra derülni",
+" borra hevülni",
+" borba merülni",
+" borra vidulni",
+" borba virulni",
+" dalra derülni",
+" dalra hevülni",
+" dalra vidulni",
+" dalra kigyúlni",
+" dalra bomolni",
+" dalba örülni",
+" dalba virulni",
+" fényre derülni",
+" fénybe hevülni",
+" fényre vidulni",
+" fénybe borulni",
+" színbe borulni",
+" színbe derülni",
+" színbe hevülni",
+" színre vidulni",
+" színbe vidulni",
+" tűzbe hevülni",
+" szeszbe hevülni",
+" szeszbe derülni",
+" vágyba hevülni",
+
+];
+
+var S9I = 
+["x",
+" nehéz.",
+" halál.",
+" tilos.",
+" a vég.",
+" cikis.",
+" csalás.",
+" hibás.",
+" csapás.",
+" zsenáns.",
+" fekély.",
+" galád.",
+" csapás.",
+" bajos.",
+" hibás.",
+" kevés.",
+" kakás",
+" csodás.",
+" mesés.",
+" viszály.",
+" veszély.",
+
+];
+
+//strofa 9 logic // checked ok // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, ranj, rank, ranl, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(15);
+ranb = vel(21);
+ranc = vel(16);
+rand = vel(12);
+rane = vel(11);
+
+ranf = vel(21);
+rang = vel(18);
+ranh = vel(31);
+rani = vel(20);
+}else{
+rana = vel(15);
+ranb = vel(15);
+ranc = vel(16);
+rand = vel(12);
+rane = vel(10);
+
+ranf = vel(21);
+rang = vel(16);
+ranh = vel(31);
+rani = vel(9);
+
+};
+
+sor1 = S9A[rana] + S9B[ranb] + S9C[ranc] + S9D[rand] + S9E[rane] + "</br>" + S9F[ranf] + S9G[rang] + S9H[ranh] + S9I[rani];
+
+
+//sor1 = sor1 + "</br>OK S9" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:" + rang +" h:" + ranh +" i:" + rani;
+return sor1;
+
+
+
+}
+function S10(mod){
+var S10A = ["x",
+"Nyílt, zabolátlan",
+"Megzabolázott",
+"Megbabonázott",
+"Átokkal szórt",
+"Felfegyverzett",
+"Megregulázott",
+"Égbekiáltó",
+"Meghamisított",
+"Elfeketített",
+"Összeragasztott",
+"Tűzből támadt",
+"Szikra szegélyű",
+"Megsavanyított",
+"Elszaporított",
+"Összegereblyélt",
+"Ó, ezerédes",
+
+
+"Késre vigyázó",
+"Tűzre vigyázó",
+
+];
+var S10B =
+["x",
+" nyelv,",
+" kedv,",
+" szív,",
+" szó,",
+" szem,",
+" száj,",
+" fül,",
+" hang,",
+" gőg,",
+" báj,",
+
+];
+var S10C =
+["x",
+" nyomorúságunk",
+" alaposságunk",
+" fontosságunk",
+" önmentségünk",
+" férgességünk",
+" féltékenység",
+" önteltségünk",
+" éberségünk",
+" balfaszságunk",
+" elesettségünk",
+" bénultságunk",
+" elevenségünk",
+" bátorságunk",
+
+
+
+" üszkösségünk",
+
+];
+var S10D =
+["x",
+" szüleménye!",
+" melegágya!",
+" veteménye!",
+" puha fészke!",
+" buzogánya!",
+" bumerángja!",
+" temetője!",
+" hozománya!",
+" puha sátra!",
+" patikája!",
+" barikádja!",
+" karimája!",
+" kerevetje!",
+" repedéke!",
+" takarója!",
+" fakabátja!",
+" lepedője!",
+
+" süteménye,",
+" petefészke!",
+
+
+
+
+
+" paripája,",
+
+];
+var S10E =
+["x",
+"Minden nap",
+"Ültünkben",
+"Esténként",
+"Fáradtan",
+"Megtörten",
+"Bűnbakként",
+"Félholtan",
+"Vesztesként",
+"Lankadtan",
+"Sértettként",
+"Fegyverrel",
+"Nap mint nap",
+"Sánta napon",
+"Drága remény,",
+"Ócska remény,",
+"Hűségből",
+"Hóhérként",
+"Pünkösdig",
+"Éjfélig",
+"Ádventig",
+
+
+
+"Fegyverrel",
+"Mindenkit",
+"Jóságot",
+"Hívságot",
+"mint az eső",
+"mint a halak",
+"mint a halász",
+"mint a vadász",
+"mint a vezér",
+"hétfőtől",
+"szerdától",
+"péntektől",
+"szombattól",
+
+];
+var S10F =
+["x",
+" siratunk",
+" temetünk",
+" takarunk",
+" szapulunk",
+" befedünk",
+" remegünk",
+" lapulunk",
+" lebegünk",
+" lerogyunk",
+" lebukunk",
+" kilesünk",
+" csevegünk",
+" tolatunk",
+" telelünk",
+" csoszogunk",
+
+" vezetünk.",
+" tüzelünk.",
+" tolatunk.",
+" tekerünk.",
+" evezünk.",
+" zuhogunk.",
+];
+
+var S10G =
+["x",
+" s titkon várjuk a fényt.",
+" s titkon várjuk a lányt.",
+" s titkon várjuk a nőt.",
+" s titkon várjuk az őszt.",
+" s titkon várjuk a gázt.",
+" s némán isszuk a bort.",
+" s némán isszuk a szeszt.",
+" s többé nem borozunk.",
+" s ettől jól berugunk.",
+" s végül jól berugunk.",
+" s minden nap berugunk.",
+" s ültünkben berugunk.",
+" s esténként berugunk.",
+" s fáradtan berugunk.",
+" s évenként berugunk.",
+" s megtörten berugunk.",
+" s bűnbakként berugunk.",
+" s félholtan berugunk.",
+" s vesztesként berugunk.",
+" s lankadtan berugunk.",
+", sértettként berugunk.",
+" s elvből megnevezünk.",
+" Múltunk sem menedék.",
+" s várjuk a ... mit? micsodát?",
+" s várjuk a fényt egyedül.",
+" s várjuk a kóbor időt.",
+" s játsszuk a kóbor apát.",
+" s féljülk a kóbor esőt.",
+" s játsszuk a kóbor anyát!",
+" s tűrjük a korcs ölebet.",
+" s lessük a korcs ölebet.",
+" s várjuk a korcs ölebet.",
+" s várjuk az Isten-igét.",
+" s féljük az Isten-igét.",
+" s halljuk a préri szavát.",
+" s isszuk az utca zaját.",
+" s féljük az utca zaját.",
+" s tűrjük az utca szavát.",
+" s halljuk a szív ütemét.",
+" s haljuk az űr ütemét.",
+" s verjük a szív ütemét.",
+" s halljuk a vér futamát.",
+"! Öngyilkos szeretőnk!",
+"! Öngyilkos repedék!",
+"! Öngyilkos ma az ég!",
+"! Öngyilkos tegezés!",
+"! Öngyilkos tagadás!",
+", nem lesz már szüretünk.",
+". Élő fegyver a szó.",
+". Élő fegyver a nyelv.",
+". Élő fegyver a kedv.",
+". Élő fegyver a szív.",
+". Élő fegyver a szem.",
+". Élő fegyver a száj.",
+". Élő fegyver a fül.",
+". Élő fegyver a hang.",
+". Élő fegyver a gőg.",
+". Élő fegyver a báj.",
+". Többé nincsen erőnk!",
+" s várjuk a záporesőt.",
+" s féljük a záporesőt.",
+" s nézzük a záporesőt.",
+" s tűrjük a záporesőt.",
+];
+
+
+//strofa 10 logic // checked ok // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(18);
+ranb = vel(10);
+ranc = vel(14);
+rand = vel(20);
+
+rane = vel(33);
+ranf = vel(21);
+rang = vel(63);
+}else{
+rana = vel(16);
+ranb = vel(10);
+ranc = vel(13);
+rand = vel(17);
+
+rane = vel(20);
+ranf = vel(15);
+rang = vel(63);
+
+};
+
+
+sor1 = S10A[rana] + S10B[ranb] + S10C[ranc] + S10D[rand]+ "</br>" + S10E[rane]  + S10F[ranf] + S10G[rang];
+
+
+//sor1 = sor1 + "</br> OK S10" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:" + rang 
+return sor1;
+
+
+};
+
+function S11(mod){
+
+var S11A =
+["x",//1/ok
+"Égi",
+"Vézna", 
+"Csúnya",
+"Néma",
+"Furcsa",
+"Gyáva",
+"Béna",
+"Gyönge",
+"Balga",
+"Durva",
+"Ritka",
+"Kurva",
+"Ronda",
+
+"Puszta",
+"Tiszta",
+"Bamba",
+"Csorba",
+"Görbe",
+"Barna",
+"Enyhe",
+"Ferde",
+"Régi",
+"Fránya",
+"Rusnya",
+"Renyhe",
+"Csorba",
+];
+var S11B =
+["x",//
+" szegényként",
+" csibészként",
+" reményként",
+" kevélyként",
+" irígyként",
+" kezesként",
+" nemesként",
+" gonoszként",
+" ravaszként",
+" zsiványként",
+" hazugként",
+" bolondként",
+" piszokként",
+" duhajként",
+" szamárként ",
+" baromként",
+" pogányként",
+" cigányként",
+" naívként",
+" tanúként",
+" barátként",
+" nyakasként",
+" kacérként",
+" huszárként",
+" madárként",
+" nyakasság,",
+" kacérság,",
+" okosság,",
+" hiúság,",
+" adottság,",
+" zavartság,",
+" tagoltság,",
+" kuszáltság,",
+" ziláltság,",
+" pogányság,",
+" cigányság,",
+" naívság,",
+" tanúság,",
+" kopárság,",
+" sietség,",
+" merészség,",
+" egészség, ",
+" csibészség,",
+" reménység, ",
+" kevélység,",
+" irígység,",
+" merevség,",
+" levertség,",
+" kimértség,",
+" feszültség,",
+" tehetség,",
+" nemesség,",
+" kopárság,",
+" ravaszság,",
+" gonoszság,",
+" zsiványság,",
+" hanyagság,",
+" duhajság,",
+" hazugság,",
+" bolondság,",
+" fonákság,",
+" piszokság,",
+" tanulság,",
+" vidámság,",
+" finomság,",
+" szamárság,",
+" mohóság,",
+" baromság,",
+" szegénység,",
+" badarság,",
+
+
+" soványként",
+" hanyagként",
+" badarként",
+" mohóként",
+" silányként",
+" hiúként",
+" okosként",
+
+" kopárság,",
+" mulatság,",
+" adósság,",
+" barátság,",
+" kicsinység,",
+" silányság,",
+" kezesség,",
+" soványság,",
+" potomság,",
+
+];
+var S11C =
+["x",//3
+" összeaszalt",
+" elfenekelt",
+" eltángált",
+" elgázolt",
+" megcsúfolt",
+" fölhergelt",
+" felszarvalt",
+" megkéselt",
+" hírbe kevert",
+" megcsúfolt",
+" íme a bús",
+" íme a szép",
+" íme a korcs",
+" íme a hű",
+" itt ül a bús",
+" itt ül a szép",
+" itt ül a korcs",
+" itt ül az új",
+" hűsöl a bús",
+" hűsöl a szép",
+" hűsöl a korcs",
+" hűsöl az új",
+" alszik a szép",
+" alszik a bús",
+" alszik a korcs",
+" ébred a bús",
+" álmodik, ó,",
+" ébred lám",
+
+" itt jön a bús",
+" itt jön a szép",
+" itt jön a korcs",
+" itt jön a hű",
+
+" megzápult",
+" félőrült",
+" átfestett",
+" szájbabaszott",
+" elfuserált",
+" megrongált",
+" széttépett",
+" elszeletelt",
+" elpréselt",
+" szeszbedobott",
+" megkésett",
+" vérbekevert",
+" elkalapált",
+" összerezelt",
+];
+var S11D =
+["x",//4
+" álHős",
+" álszent",
+" császár",
+" vendég",
+" csóró",
+" Bálvány",
+" álBárd",
+" főhős",
+" Jövevény",
+" álBölcs",
+" Hermész",
+" Adonisz",
+" Neptún",
+" ifjú",
+
+" csataBárd",
+];
+
+var S11E =
+["x",//5
+" a sötétben,",
+" puha ágyon,",
+" a szobában,",
+", puha széken,",
+" a szekéren,",
+", meleg ágyon,",
+", betegágyon,",
+", bumeránggal,",
+", kavics-ágyon,",
+", kalapostúl,",
+", gatya nélkül,",
+", falu végén,",
+", ruha nélkül,",
+
+" a hazáért; ",
+];
+
+var S11F =
+["x",//6
+"Egri",
+"Őrsi",
+"Benke",
+"Balla",
+"Petri",
+"Pócsi",
+"Módy",
+"Borcsa",
+"Bencze ",
+"Bába",
+"Báthy",
+"Csécsi",
+"Kézdi",
+"Kurdi",
+"Kurta",
+"Árva",
+"Szende",
+"Györffy",
+"Csorda",
+"Dóczi",
+"Érdi",
+"Erki",
+"Móra",
+"Gozsdu",
+"Hódi",
+"Kucka",
+"Kúti",
+"Mádi",
+"Léva",
+"Mózsi",
+"Morva",
+"Pándi",
+"Nyéki",
+"Pálfy",
+"Pályi",
+"Csányi",
+"Rosta",
+"Sánta",
+"Tátra",
+"Szépe",
+"Csáky",
+"Kende",
+"Váczi",
+"Réthy",
+"Zöldi",
+"Gálffi",
+"Fábri",
+"Dérczy",
+"Dési",
+"Egri",
+"Rácz",
+"Tóth",
+"Kós",
+"Ganz",
+"Soós",
+"Herz",
+"Láng",
+"Végh",
+"Solt",
+"Vígh",
+"Szél",
+"Szép",
+"Szász",
+"Sík",
+"Papp",
+"Pócs",
+"Klein",
+"György",
+"Gál",
+"Csák",
+"Ágh",
+"Ács",
+];
+var S11G =
+["x",//7
+" Aladár,",
+" Elemér,",
+" Benedek,",
+" Töhötöm,",
+" Barabás,",
+" Tivadar,",
+" Alajos,",
+" Salamon,",
+" Kelemen,",
+" Vladimír,",
+" Tihamér,",
+" Botond,",
+" Dezső,",
+" Jenő,",
+" Ferenc,",
+" Mihály,",
+" Tiborc,",
+" Izsák,",
+" Adolf,",
+" Balázs,",
+" Cirill,",
+" Csanád,",
+" Donát,",
+" Előd,",
+" Emőd,",
+" Fidél,",
+" Geréb,",
+" Hubert,",
+" Hugó,",
+" Iván,",
+" Kunó,",
+" Leó,",
+" Loránd,",
+" Lukács,",
+" Manó,",
+" Milán,",
+" Özséb,",
+" Petúr,",
+" Rezső,",
+" Roland,",
+" Rudolf,",
+" Szabolcs,",
+" Szilárd,",
+" Tamás,",
+" Timót,",
+" Valér,",
+" Zorán,",
+];
+
+var S11H =
+["x",//8
+" gáz- és",
+" csámpás",
+" sérült",
+" a piás",
+" dörzsölt",
+" agyafúrt",
+" babonás",
+" ragyogó",
+" berugós",
+" fő-fő",
+" hazudós",
+" beszeszelt",
+" titkos",
+" részeg",
+" remegő",
+
+" bepiált",
+
+" bárcás",
+" csendes",
+" rendes",
+" mérges",
+" morcos",
+" haragos",
+" régész",
+" bencés",
+" cserkész,",
+];
+
+
+var S11I =
+["x",
+" villanydrót",
+" köztelefon",
+" fémkábel",
+" drótvezeték",
+" csővezeték",
+" ólomcső",
+" ízzószál",
+" fűtőszál",
+" gyújtószál",
+" csengődrót",
+" fűtőtest",
+" vízvezeték",
+" gőzvezeték",
+];
+var S11J =
+["x",
+" szerelő.",
+" kezelő.",
+" lerakó.",
+" bekötő.",
+" berakó.",
+" lefedő.",
+" befedő.",
+" eladó.",
+
+" kutató.",
+" kereső.",
+" felező.",
+" falazó.",
+" vakoló.",
+" pakoló.",
+" kereső.",
+" magató.",
+" taroló.",
+" perelő.",
+" soroló.",
+" sorozó.",
+" terelő.",
+" reszelő.",
+" taposó.",
+" vezető.",
+" faszoló.",
+];
+
+var S11X =
+["x",//
+" vezekel most,",
+" vacsorázik,",
+" dudorászik,",
+" fuvolázik,",
+" kacarászik,",
+" heherészik,",
+" datolyázik,",
+" bogarászik,",
+" egerészik,",
+" citerázik,",
+" csöcsörészik,",
+" meakulpáz,",
+" neve, címe:",
+
+", a sötétben",
+", puha ágyon",
+", a szobában",
+", puha széken",
+", a szekéren",
+", meleg ágyon",
+", betegágyon",
+", bumeránggal,",
+", kavics-ágyon",
+", kalapostúl,",
+", gatya nélkül,",
+", falu végén",
+", ruha nélkül,",
+", a hazáért; ",
+
+
+
+" hazudik pénzt,",
+" keres engem,",
+];
+
+//strofa 11 logic /// stringek talna jok, meg hibas
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, ranj, temp;
+var sor1;
+
+if (mod=="koltoi") {
+//not implemented, needs to calculated 190929
+
+}else{
+rana = vel(13);
+ranb = vel(70);
+ranc = vel(28);
+rand = vel(14);
+rane = vel(13);
+
+ranf = vel(72);
+if(ranf>50){rang=vel(11)}
+else{ rang=vel(30)
+};
+
+ranh = vel(15);
+if(ranh<2){rani=vel(2)}
+else{ rani=vel(11)}
+rani = vel(8);
+ranj = vel(15);
+
+};
+
+
+sor1 = S11A[rana] + S11B[ranb] + S11C[ranc] + S11D[rand]+ S11E[rane]+ "</br>"   + S11F[ranf]+ S11G[rang] + S11H[ranh] + S11I[rani] + S11J[ranj];
+
+
+//sor1 = sor1 + "</br>OK S11" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:"+ rang +" h:"+ ranh +" i:"+ rani +" j:" + ranj 
+return sor1;
+};
+
+function S12(mod){
+
+var S12A =
+["x",//1
+"Hajnali pír",
+"Sánta remény",
+"Esti homály",
+"Déli sugár",
+"Reggeli fény",
+"Éjjeli köd",
+"Angyali báj",
+"Ébred a nap",
+"Lobban a nap",
+"Pirkad az ég",
+"Esti magány",
+"Ébred a fény",
+"Pirkad a nap",
+"Égi parázs",
+"Hajnali tűz",
+"Reggeli tűz",
+"Asszonyi kéj",
+"Csacska leány",
+"Reggeli pír",
+"Hajnali fény",
+];
+var S12B =
+["x",//2
+" lopakodva",
+" vonakodva",
+" lesekedve",
+" vacakolva",
+" vezekelve",
+" huzakodva",
+" szakadozva",
+" epedezve",
+" piszmogva",
+" pusmogva",
+" epekedve",
+];
+var S12C =
+["x",//3
+" belép",
+" benéz",
+" betér",
+" besír",
+" beszól",
+" benyúl",
+" beleng",
+" bering",
+" besúg",
+" belejt",
+];
+var S12D =
+["x",//4
+" a szobába.",
+" a lakásba.",
+" a karámba.",
+" a terembe.",
+" a bozótba.",
+" a bokorba.",
+" a zanótba.",
+" a faházba.",
+" a gödörbe.",
+" a vödörbe.",
+" a csöbörbe.",
+" az edénybe.",
+" a kajütbe.",
+" a kupéba.",
+];
+var S12E =
+["x",//5
+" Tavasz lesz.",
+" Tavasz van.",
+" Szünet lesz.",
+" Szünet van.",
+" Meleg lesz.",
+" Meleg van.",
+" Hideg lesz.",
+" Hideg van.",
+" Vihar lesz.",
+" Eső lesz.",
+" Elég volt.",
+" Szüret lesz.",
+" Szüret van.",
+" Dagály lesz.",
+" Dagály van.",
+" Apály lesz.",
+" Apály van.",
+" Piac van.",
+" Narancs nincs.",
+" Ma nincs más.",
+" Haragszol?",
+" Hiszel még?",
+" Tanulj hát!",
+" Veszekszel?",
+" Csaló vagy?",
+" Csalás nincs!",
+" Fölébredsz?",
+" Verekszel?",
+" Fagyos vagy?",
+" Hová mész?",
+" Kivel vagy?",
+" Kinek szólsz?",
+" Kiért szólsz?",
+" Kiről szólsz?",
+" Miért szólsz?",
+" Minek szólsz?",
+" Nekem szólsz?",
+" Parancs szól!",
+" Rideg vagy?",
+" Remegsz még?",
+" Remegj hát!",
+" Rügyeznél?",
+" Röhögnél?",
+" Sokat türsz!",
+" Mit állsz itt?!",
+" Mit állsz ott?",
+" Kinek kell?",
+" Elég lesz?",
+" Varázslat!",
+" Zenélj csak!",
+];
+var S12F =
+["x",//6
+"Mosd ki az álmaidat! ",
+"Mosd ki a terveidet! ",
+"Mosd ki reményeidet! ",
+"Mosd ki az életedet! ",
+"Mosd ki a gondjaidat! ",
+"Mosd ki a bűneidet! ",
+"Szórd ki az álmaidat! ",
+"Lökd el az életedet! ",
+"Szórd ki a gondjaidat! ",
+"Dobd ki az álmaidat! ",
+"Dobd ki a terveidet! ",
+"Dobd ki reményeidet! ",
+"Dobd ki az életedet! ",
+"Dobd ki a gondjaidat! ",
+"Dobd ki a bűneidet! ",
+"Lökd el az álmaidat! ",
+"Lökd el a terveidet! ",
+"Lökd le reményeidet! ",
+"Lökd el az életedet! ",
+"Lökd el a gondjaidat! ",
+"Lökd el a bűneidet! ",
+"Lápi szömörcecelégy! ",
+"Lápi szamócafatok! ",
+"Házi pogány a család! ",
+"Házi szegénymaradék! ",
+"Házi vagány valahány?! ",
+"Tiszta szeméremelő! ",
+"Mint a szömörcecelégy! ",
+"Ó, te felöklelemény! ",
+"Minta karambulizás! ",
+"Mennyi",
+"Ennyi",
+"Ronda",
+"Kvázi",
+"Semmi",
+"Annyi",
+"Hősi",
+"Régi",
+"Ősi",
+"Kurva",
+"Durva",
+"Satnya",
+"Zsenge",
+"Enyhe",
+];
+var S12G =
+["x",//f kiegészites ha d >30
+" pogány szülemény!",
+" szegény-maradék! ",
+" vagányrakomány! ",
+" világcsapodár! ",
+" szeméremelő! ",
+" fehérkacsalád! ",
+" kedély-esemény! ",
+" szamócafat! Az! ",
+" szömörcecelégy! ",
+" karambulizás! ",
+" efendiadém! ",
+
+" alábbhagyafúrt.",
+" efendiadém! ",
+" misézikerág.",
+" rabicfaladár.",
+" gyomorfaladár.",
+" kiérlelemér.",
+" felöklelemény.",
+];
+var S12H =
+["x",//7
+"Vesd le",
+"Vesd ki",
+"Vedd le",
+"Tedd le",
+"Tedd ki",
+"Tedd el",
+"Lökd le",
+"Lökd ki",
+"Lökd el",
+"Dobd el",
+"Dobd ki",
+"Dobd le",
+"Górd ki",
+"Hányd ki",
+"Szórd ki",
+
+" Varrd meg",
+" Vedd fel",
+" Húzd fel",
+" Vedd ki",
+" Vesd le",
+" Vesd ki",
+" Húzd le",
+" Mosd ki",
+
+];
+var S12I =
+["x",//8
+" a munkaruhád.",
+" a tiszta ruhád.",
+" a bőrmokaszint.",
+" a bőrbekecsed.",
+" a bőrdzsekidet.",
+" a szvetteredet.",
+" a szennyesedet.",
+" a tiszta ruhát.",
+" a börberidet.",
+" az álmaidat.",
+" a terveidet.",
+" reményeidet.",
+" az életedet.",
+" a gondjaidat.",
+" a bűneidet.",
+
+" a sárga cipőd.",
+" a filckalapod.",
+" a barna gatyád.",
+];
+
+//strofa 12 logic // checked OK // checked with source, correct 190928 acceptable
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani,   temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(20);
+ranb = vel(11);
+ranc = vel(10);
+rand = vel(14);
+rane = vel(50);
+
+ranf = vel(44);
+if(ranf>30){
+rang = vel(18)
+}else {rang=0}
+
+if(ranf<22){
+};
+// kod nem teljesen tiszta eredetiben, egy felteltel nem implementalt
+// if it < 6 then
+ranh = vel(23);
+rani = vel(18);
+}else{
+rana = vel(20);
+ranb = vel(11);
+ranc = vel(10);
+rand = vel(14);
+rane = vel(50);
+
+ranf = vel(44);
+if(ranf>30){
+rang = vel(11)
+}else {rang=0}
+
+if(ranf<22){
+};
+// kod nem teljesen tiszta eredetiben, egy felteltel nem implementalt
+// if it < 6 then
+ranh = vel(15);
+rani = vel(15);
+
+};
+
+
+sor1 = S12A[rana] + S12B[ranb] + S12C[ranc] + S12D[rand]+ S12E[rane]+ "</br>"+ S12F[ranf];  
+if (rang!=0) {sor1 = sor1 + S12G[rang] };
+sor1 = sor1 + S12H[ranh] + S12I[rani] ;
+
+//sor1 = sor1 + "</br>OK S12" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:"+ rang +" h:" + ranh 
+return sor1;
+}
+
+function S13(mod){
+
+var S13A =
+["x",
+"Sírja felett",
+"Szárnya alatt",
+"Szíve tövén",
+"Lelke alatt",
+"Lelke felett",
+"Sírja alatt",
+"Sírja tövén",
+"Szíve felett",
+"Szíve alatt",
+"Szárnya felett",
+"Szárnya tövén",
+"Ágya fölött",
+"Ágya megett",
+"Ágya alatt",
+"Ingében",
+"Inge alatt",
+];
+var S13B =
+["x",
+" gomolyog",
+" bolydul",
+" mocorog",
+" batyuzik",
+" bodroz",
+" bolyhol",
+" bomlik",
+" reszket",
+" setteg",
+" kushad",
+" kucorog",
+" guggol",
+" gravitál",
+" tempóz",
+" táncol",
+];
+
+var S13C =
+["x",
+" suttogva",
+" settegve",
+" pusmogva",
+" piszmogva",
+" kavarogva",
+" keveregve",
+" kántálva",
+" dúdolva",
+" sercegve",
+" szösszenve",
+" szürcsögve",
+];
+
+
+var S13D =
+["x",
+" az alkonyi",
+" a hárshegyi",
+" a hárstea",
+" a reggeli",
+" az éjjeli",
+" a szombati",
+" az áfonya",
+" a csimpolya",
+" a csormolya",
+" a szervita",
+" a szarmata",
+" a mandula",
+" a bestia",
+" a hárpia",
+" a szépia",
+" a dália",
+" az orgia",
+" egy uncia",
+" a gyógytea",
+" a guzlica",
+" a bodzafa",
+" a szilvafa",
+" az almafa",
+
+" a muslica",
+" a zongora",
+" az osztriga",
+" a cimbora",
+" egy angora",
+" a tarhonya",
+" a burgonya",
+" a laktanya",
+" a bűntanya",
+" az ősanya",
+" az óhaza",
+" az őshaza",
+" a maffia",
+];
+var S13E =
+["x",
+" szellő.",
+" permet.",
+" pára.",
+" légár.",
+" illat.",
+" felszél.",
+" alszél.",
+" bűz, ó!",
+" párlat.",
+" szaglat.",
+" bűvszer.",
+" cefre.",
+" ájer.",
+
+" langyár.",
+];
+var S13F =
+["x",
+"Lám a szavaktól fél,",
+"Lám a szavaktól tart,",
+"Lám a szavaktól fut,",
+"Lám a szavaktól kék s",
+"Lám a szavaktól zöld s",
+"Lám a szavakból él s",
+"Lám a szavakra figyel s",
+"Lám a szavakhoz húz s",
+"Most a szavaktól fél s",
+"Most a szavaktól tart s",
+"Most a szavaktól fut s",
+"Most a szavaktól kék s",
+"Most a szavaktól zöld s",
+"Most a szavak mezején",
+"Most a szavakból él,",
+"Most a szavakra figyel,",
+"Most a szavakhoz húz,",
+"Míg a szavaktól fél,",
+"Míg a szavaktól tart,",
+"Míg a szavaktól fut,",
+"Míg a szavaktól kék,",
+"Míg a szavaktól zöld,",
+"Míg a szavak mezején",
+"Míg a szavakból él,",
+"Míg a szavakra figyel,",
+"Míg a szavakhoz húz,",
+"Mert a nyomortól fél,",
+"Mert a nyomortól tart,",
+"Mert a nyomortól fut,",
+"Mert a nyomortól kék,",
+"Mert a nyomortól zöld,",
+"Mert a nyomorból él,",
+"Mert a nyomorra figyel,",
+"Mert a nyomorhoz húz,",
+"Most a nyomortól fél,",
+"Most a nyomortól tart,",
+"Most a nyomortól fut,",
+"Most a nyomortól kék s",
+"Most a nyomortól zöld s",
+"Most a nyomor mezején",
+"Most a nyomorból él s",
+"Most a nyomorra figyel s",
+"Most a nyomorhoz húz s",
+"Míg a nyomortól fél,",
+"Míg a nyomortól tart,",
+"Míg a nyomortól fut,",
+"Míg a nyomortól kék,",
+"Míg a nyomortól zöld,",
+"Míg a nyomorból él,",
+"Míg a nyomorra figyel,",
+"Míg a nyomorhoz húz,",
+"Mert a gonosztól fél,",
+"Mert a gonosztól tart,",
+"Mert a gonosztól fut,",
+"Mert a gonosztól kék,",
+"Mert a gonosztól zöld,",
+"Ám a gonosz mezején",
+"Ő a gonoszból él s",
+"Ő a gonoszra figyel s",
+"Ő a gonoszhoz húz s",
+"Most a gonosztól fél,",
+"Most a gonosztól tart,",
+"Most a gonosztól fut,",
+"Most a gonosztól kék s",
+"Most a gonosztól zöld s",
+"Most a gonosz mezején",
+"Most a gonoszból él,",
+"Most a gonoszra figyel,",
+"Most a gonoszhoz húz,",
+"Míg a gonosztól fél,",
+"Míg a gonosztól tart,",
+"Míg a gonosztól fut,",
+"Míg a gonosztól kék,",
+"Míg a gonosztól zöld,",
+"Míg a gonoszból él,",
+"Míg a gonoszra figyel,",
+"Míg a gonoszhoz húz,",
+"Mert a hazugtól fél,",
+"Mert a hazugtól tart,",
+"Mert a hazugtól fut,",
+"Mert a hazugtól kék,",
+"Mert a hazugtól zöld,",
+"Mert a hazugra figyel,",
+"Mert a hazughoz húz,",
+"Most a hazugtól fél,",
+"Most a hazugtól tart,",
+"Most a hazugtól fut,",
+"Most a hazugból él s",
+"Most a hazugra figye s",
+"Most a hazughoz húz s",
+"Míg a hazugtól fél,",
+"Míg a hazugtól tart,",
+"Míg a hazugtól fut,",
+"Míg a hazugtól kék,",
+"Míg a hazugtól zöld,",
+"Míg a hazug mezején",
+"Míg a hazugból él,",
+"Míg a hazugra figyel,",
+"Míg a hazughoz húz,",
+"Mert a haragtól fél,",
+"Mert a haragtól tart,",
+"Mert a haragtól fut,",
+"Mert a haragtól kék,",
+"Mert a haragtól zöld,",
+"Mert a haragból él,",
+"Mert a haragra figyel,",
+"Mert a haraghoz húz,",
+"Most a haragtól fél,",
+"Most a haragtól tart,",
+"Most a haragtól fut,",
+"Most a haragtól kék,",
+"Most a haragtól zöld,",
+"Most a harag mezején",
+"Most a haragból él,",
+"Most a haragra figyel,",
+"Most a haraghoz húz,",
+"Míg a haragtól fél,",
+"Míg a haragtól tart,",
+"Míg a haragtól fut,",
+"Míg a haragtól kék,",
+"Míg a haragtól zöld,",
+"Míg a haragból él,",
+"Míg a haragra figyel,",
+"Míg a haraghoz húz,",
+"Mert az anyagtól fél,",
+"Ő az anyagtól tart, s",
+"Ő az anyagtól fut s",
+"Ő az anyagból él s",
+"Ő az anyagra figyel s",
+"Most az anyagtól fél,",
+"Most az anyagtól tart,",
+"Most az anyagtól fut,",
+"Most az anyagtól kék,",
+"Most az anyagtól zöld,",
+"Most az anyagból él,",
+"Most az anyagra figyel,",
+"Most az anyaghoz húz,",
+"Míg az anyagtól fél,",
+"Míg az anyagtól tart,",
+"Míg az anyagtól fut,",
+"Míg az anyagtól kék,",
+"Míg az anyagtól zöld,",
+"Míg az anyag mezején",
+"Míg az anyagból él,",
+"Míg az anyagra figyel,",
+"Míg az anyaghoz húz,",
+"Mert a világtól fél,",
+"Mert a világtól tart,",
+"Mert a világtól fut,",
+"Mert a világból él,",
+"Mert a világra figyel,",
+"Mert a világhoz húz,",
+"Most a világtól fél,",
+"Most a világtól tart,",
+"Most a világtól fut,",
+"Most a világtól kék,",
+"Most a világtól zöld,",
+"Most a világ mezején",
+"Most a világból él,",
+"Most a világra figyel,",
+"Most a világhoz húz,",
+"Míg a világtól fél,",
+"Míg a világtól tart,",
+"Míg a világtól fut,",
+"Míg a világtól kék,",
+"Míg a világtól zöld,",
+"Míg a világ mezején",
+"Míg a világból él,",
+"Míg a világra figyel,",
+"Míg a világhoz húz,",
+"Mert a szereptől fél,",
+"Mert a szereptől tart,",
+"Mert a szereptől fut,",
+"Mert a szereptől kék,",
+"Mert a szereptől zöld,",
+"Ő a szerepből él s",
+"Mert a szerepre figyel s",
+"Most a szereptől fél s",
+"Most a szereptől tart s",
+"Most a szereptől fut s",
+"Most a szereptől kék s",
+"Most a szereptől zöld s",
+"Most a szerepből él,",
+"Most a szerepre figyel,",
+"Most a szerephez húz,",
+"Míg a szereptől fél,",
+"Míg a szereptől tart,",
+"Míg a szereptől fut,",
+"Míg a szereptől kék,",
+"Míg a szereptől zöld,",
+"Míg a szerepből él,",
+"Míg a szerepre figyel,",
+"Míg a szerephez húz,",
+"Mert a hirigtől fél,",
+"Mert a hirigtől tart,",
+"Mert a hirigből él s",
+"Mert a hirigre figyel s",
+"Mert a hirighez húz s",
+"Most a hirigtől fél,",
+"Most a hirigtől tart,",
+"Most a hirigtől fut s",
+"Most a hirigtől kék s",
+"Most a hirigtől zöld s",
+"Most a hirig mezején",
+"Most a hirigből él,",
+"Most a hirigre figyel,",
+"Most a hirighez húz,",
+"Míg a hirigtől fél,",
+"Míg a hirigtől tart,",
+"Míg a hirigtől fut,",
+"Míg a hirigre figyel,",
+"Mind, aki vár, aki él,",
+
+];
+var S13G =
+["x",// /10/15
+" menti",
+" védi",
+" tűri",
+" szűri",
+" szánja",
+" óvja",
+" félti",
+" hívja",
+" szidja",
+" gyötri",
+" gyűri",
+" vágja",
+" tépi",
+" marja",
+" rúgja",
+//
+"Fújd fel",
+"Szánja",
+"Küldi",
+"Szard le˙ö",
+];
+
+var S13H =
+["x",
+" az isteneket.",
+" a szellemeket.",
+" a bajnokokat.",
+" a bűnösöket.",
+" a faszfejeket.",
+" a gondolatot.",
+" a lepcseseket.",
+" a langyosokat.",
+" az életedet.",
+" az életemet.",
+];
+var rana, ranb, ranc, rand, rane, ranf, rang,ranh,    temp;
+var sor1;
+
+if (mod=="koltoi") {
+
+}else{
+rana = vel(16);
+ranb = vel(15);
+ranc = vel(11);
+rand = vel(23);
+
+rane = vel(13);
+ranf = vel(208);
+rang = vel(15);
+ranh = vel(10);
+
+//Agya maeett setteg suttogva az almafa alszel.
+//Mert hazutl fut, szanja a lepcsseket.
+
+};
+// strofa logic 13 // checked OK // checked with source, correct 190928
+
+sor1 = S13A[rana] + S13B[ranb] + S13C[ranc] + S13D[rand]+ S13E[rane]+ "</br>" + S13F[ranf] + S13G[rang]  + S13H[ranh] ;
+
+//sor1 = sor1 + "</br>OK S13" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:"+ rang +" h:" + ranh 
+return sor1;
+}
+
+function S14(mod){
+var S14A =
+["x",//1
+"Ott, hol a",
+"Távol a",
+"Nálad a",
+"Ősszel a",
+"Nyáron a",
+"Máskor a",
+"Akkor a",
+"Tudd, hogy a",
+"Hidd, hogy a",
+"Íme, a",
+"Otthon a",
+"Nézd, hogy a",
+"Majdan a",
+"Végre a",
+"Holnap a",
+"Most, hogy a",
+"Végül a",
+"Látod?! A",
+
+"Egyszer a",
+"Áldott",
+];
+var S14B =
+["x",//2
+"z esti sugár",
+" reggeli fény",
+" szikra-szemű",
+" hőscincér",
+" nádi tücsök",
+" nádi rigó",
+" hajnali pír",
+" hajnalpír",
+"z égi manó",
+" mennyei Jó",
+" nőcsábász",
+" szoknyapecér",
+" nagybátyád",
+" nagynénéd",
+" szolgálód",
+" szép szeretőd",
+" drága leány",
+" csacska leány",
+"z úri fiú",
+" suszterné",
+" hentesné",
+" polgárőr",
+" rendőrség",
+" honvédség",
+" bálnavadász",
+"z esperes úr",
+" plébános",
+" vak mikulás",
+"z őrült nő",
+" házi tanár",
+" bajkeverő",
+" szomszéd lány",
+"z üknagyapó",
+"z üknagyanyó",
+];
+var S14C =
+["x",//3
+" gőzfátyolt",
+" gumipárnát",
+" bugyizászlót",
+" melltartót",
+" inggallért",
+" rongyfelhőt",
+" zsebkendőt",
+" szűzfátyolt",
+" szőrlabdát",
+" koriandert",
+" szivacsalmát",
+" szerecsenfűt",
+" csoda-lámpást",
+" gumilabdát",
+
+" budiajtót",
+" herezacskót",
+];
+var S14D =
+["x",//4
+" úsztat",
+" áztat",
+" forgat",
+" lenget",
+" pörget",
+" hordoz",
+" mosdat",
+" leplez",
+" mozgat",
+" paskol",
+" ringat",
+
+" rugdal",
+" tárol",
+" tervez",
+" vontat",
+" zsongat",
+" faggat",
+" csépel",
+" bolygat",
+" szaggat",
+
+" altat",
+" kormoz",
+" terget",
+" sorsol",
+" színlel",
+" tapsol",
+" tördel",
+];
+var S14E =
+["x",//5
+" az ágon,",
+" a földön,",
+" a vízben,",
+" a légben,",
+" a tóban,",
+" a lépcsőn,",
+" a téren,",
+" a fűben,",
+" ocsúdva,",
+", aranylót,",
+" a hóban,",
+", ezüstöt,",
+
+" az éren,",
+" előnnyel,",
+" erővel,",
+];
+var S14F =
+["x",//6
+"Férfierő",
+"Hagyd örökül",
+"Add örökül",
+"Mondd egyedül",
+"Mondd ki a szót",
+"Mondd ki, mi bánt",
+"Írd le, mi bánt",
+"Add ki magad",
+"Vald be bajod",
+"Adj, adakozz",
+"Tudd, mire jutsz",
+"Tudd, mit akarsz",
+"Tudd, mit igér",
+];
+var S14G =
+["x",//7
+" ha kihúnysz,",
+" ha lebuksz,",
+" ha lekopsz,",
+" ha lehullsz,",
+" ha repülsz,",
+" ha zuhansz,",
+" ha kihülsz,",
+" ha lerogysz,",
+" ha berúgsz,",
+" ha kimúlsz,",
+
+" ha lefogysz,",
+];
+var S14H =
+["x",//8
+" zsirban",
+" bűnben",
+" szeszben",
+" sörben",
+" borban",
+" drogban",
+" tejben",
+" vajban",
+" sárban",
+" jódtól",
+" sótól",
+" sörtől",
+" bortól",
+" szesztől",
+" szextől",
+" drogtól",
+
+" lábtól",
+" tűzben",
+];
+var S14I =
+["x",//9
+" foszlik",
+" feslik",
+" bomlik",
+" romlik",
+" tesped",
+" sorvad",
+" senyved",
+" satnyul",
+" fonnyad",
+" oszlik",
+" erjed",
+" ájul",
+
+" omlik",
+" porlad",
+" fénylik",
+" enged",
+" döglik",
+" bűzlik",
+" hámlik",
+];
+
+
+
+var S14J =
+["x",//10
+" a kéj.",
+" a csók.",
+" a báj.",
+" az élv.",
+" az ész.",
+" az üdv.",
+" a szív.",
+" az ''én''.",
+" igéd.",
+" a szó.",
+" erőd.",
+
+" az úr.",
+" az ász.",
+];
+
+
+//strofa 14 logic // checked ok /// checked with source, correct 190928
+
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani,ranj, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(20);
+ranb = vel(34);
+ranc = vel(16);
+rand = vel(27);
+rane = vel(15);
+
+ranf = vel(13);
+rang = vel(11);
+ranh = vel(18);
+if (ranh<10) {
+rani=vel(11);
+}
+else{
+rani=vel(19);
+}
+ranj = vel(13);
+	
+}else{
+
+rana = vel(18);
+ranb = vel(34);
+ranc = vel(14);
+rand = vel(11);
+rane = vel(12);
+
+ranf = vel(13);
+rang = vel(10);
+ranh = vel(16);
+if (ranh<10) {
+rani=vel(11);
+}
+else{
+rani=vel(16);
+}
+ranj = vel(11);
+
+
+};
+
+
+sor1 = S14A[rana] + S14B[ranb] + S14C[ranc] + S14D[rand] + S14E[rane]+"</br>"  + S14F[ranf]  + S14G[rang]  + S14H[ranh] + S14I[rani] + S14J[ranj]
+
+
+//sor1 = sor1 + "</br>OK S14" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf  +" g:" + rang+" h:" + ranh +" i:" + rani +" j:" + ranj 
+return sor1;
+}
+
+function S15(mod){
+var S15A =
+["x",//1
+"Rossz ízek ",
+"Vágyálmok ",
+"Hontalan ágy ",
+"Szolga-napok ",
+"Éhinség ",
+"Éji magány ",
+"Rab monológ ",
+"Barbár vágy ",
+"Recski mesék ",
+"Ronda viták ",
+
+"Kínkamrák ",
+"Búvó ott",
+"Nem tudok én",
+"Tört bordák",
+];
+var S15B =
+["x",//2
+"peremén",
+"mélyén",
+"földjén",
+"partján",
+"szirtjén",
+"fövenyén",
+"balján",
+"csúcsán",
+"taraján",
+"közepén",
+"alján",
+
+"cicijén",
+" honi táj, ó ",
+" meghalni se",
+" házán",
+" gömbjén",
+" velején",
+" talaján",
+"keretén",
+"kosarán",
+];
+var S15C =
+["x",//3
+" panamázik",
+" totojázik",
+" kacarászik",
+" citerázik",
+" karikázik",
+" leveledzik",
+" vért izzad",
+" kínszenved",
+" heherészik",
+" nyögdécsel",
+" hajbókol",
+" tornázik",
+" lakomázik",
+
+" sokféle",
+
+" melegágyaz",
+" kirepeszti",
+" elereszti",
+" lakomázik",
+" kalapácsol",
+];
+
+var S15D =
+["x",//4
+" emígy a",
+" amúgy a",
+" a néma",
+" a náci",
+" a dőre",
+" a törpe",
+" a tompa",
+" a nyegle",
+" a spicli",
+" akárki",
+
+" fasiszta",
+" a medve",
+" még az az",
+" nélküled",
+", tép a",
+", bőg a",
+", cseng a",
+", dúl a",
+" a ronda",
+", csüng a",
+", fúj a",
+", hág a",
+" a néma",
+" a méla",
+" a léha",
+" a kába",
+" a béna",
+" a durva",
+" a kurva",
+" a bolha",
+" a bomba",
+" a bamba",
+" a ronda",
+];
+var S15E =
+["x",//5
+" tekintet.",
+" boszorkány.",
+" fejőnő.",
+" fososgém.",
+" vadállat.",
+" vadorzó.",
+" magiszter.",
+" kolompos.",
+" gazember.",
+" kuruzsló.",
+" miniszter.",
+" apostol.",
+" eretnek.",
+" oroszlán.",
+
+
+" otthon.",
+" immár.",
+" vagányság.",
+" komorság.",
+" cukorbaj.",
+" szegénység",
+" csodálat.",
+" kurucság.",
+" kevélység.",
+" szemérem.",
+];
+
+
+var S15F =
+["x",//6
+"Fölszabadulni",
+"Elszabadulni",
+"Fölkerekedni",
+"Megszabadulni",
+"Elmenekülni",
+"Eltirhulni",
+"Megmenekülni",
+"Tudj hova menni",
+"Most odamenni?",
+"Elkarikázni",
+"Elszéledni",
+"Megpattanni",
+"Elpattanni",
+"Elkerekezni",
+"Elszabadulni",
+
+
+
+"Elkeveredni",
+"Elkanyadorni",
+"Fölcseperedni",
+];
+
+var S15G =
+["x",//7
+" legény!",
+" leány!",
+" bizony!",
+" apám!",
+" anyám!",
+" öcsém!",
+" komám!",
+" fiú!",
+" babám!",
+" fiam!",
+" cicám!",
+
+" nem ám",
+" csak úgy",
+" sehogy",
+];
+
+var S15H =
+["x",//8
+" Gyorsan",
+" Nyiltan",
+" Szótlan",
+" Reggel",
+" Éjjel",
+" Csendben",
+" Halkan",
+" Lassan",
+" Rendben",
+" Gyáván",
+
+];
+
+
+
+var S15I =
+["x",//9
+", mint a halál.",
+", mint a madár.",
+", puska előtt.",
+", mint Babilon.",
+", mint a csodák!",
+", munka után!",
+", mint fakutyák!",
+", mint Barabás!",
+", munka előtt.",
+", vizsga után.",
+", vizsga előtt.",
+", barmok előtt.",
+", lámpa alatt.",
+", a csürhe után.",
+", a csürhe előtt.",
+", a csürhe mögött.",
+" fonnyad a füst.",
+" terjed a füst.",
+" fonnyad a köd.",
+" megfog a füst.",
+" táncol a füst.",
+" megfog a köd.",
+" terjed a köd.",
+" táncol a köd.",
+" vagy soha már.",
+];
+
+
+//strofa 15 logic //checked ok // checked with source, correct 190928 acceptable
+
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, temp;
+var sor1;
+
+if (mod=="koltoi") {
+
+rana = vel(14);//1
+ranb = vel(20);//2
+ranc = vel(19);//3
+rand = vel(33);//4
+//if vari1603 = 13 then nem implementalt
+rane = vel(14);
+
+ranf = vel(18);//6
+rang = vel(14);//7
+ranh = vel(10);//8
+rani = vel(25);//9
+	
+}else{
+
+rana = vel(10);//1
+ranb = vel(11);//2
+ranc = vel(13);//3
+rand = vel(10);//4
+//if vari1603 = 13 then nem implementalt
+rane = vel(14);
+
+ranf = vel(15);//6//16 volt?, bug in original?
+rang = vel(11);//7
+ranh = vel(10);//8
+rani = vel(25);//9
+
+};
+
+
+sor1 = S15A[rana] + S15B[ranb] + S15C[ranc] + S15D[rand] + S15E[rane]+ "</br>"  + S15F[ranf]  + S15G[rang] + S15H[ranh] + S15I[rani]
+
+
+//sor1 = sor1 + "</br>OK S15" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf  +" g:" + rang+" h:" + ranh +" i:" + rani 
+return sor1;
+}
+function S16(mod){
+var S16A =
+["x",//1/20
+"Próféták",
+"Atléták",
+"Kurd paripák",
+"Rác katonák",
+"Római nők",
+"Sánta király",
+"Kíntornász",
+"Téli bohóc",
+"Kincskeresők",
+"Szertornász",
+"Kőszobrász",
+"Rókavadász",
+"Öttusa sztár",
+"Vendéglős",
+"Belgyógyász",
+"Császárnék",
+"Császárnők",
+"Taxi sofőr",
+"Angolnák",
+"Fodrásznők",
+];
+var S16B =
+["x",//2/15
+" által szólt",
+" révén hált",
+" révén járt",
+" révén volt",
+" révén ült",
+" ürügyén szólt",
+" nyelvén szólt",
+" mellett szólt",
+" hangján szólt",
+" tetemén ült",
+" tetemén várt",
+" mellett jött",
+" mellett várt",
+" ürügyén jött",
+" ürügyén kért",
+];
+var S16C =
+["x",//3/11
+" régen",
+" ősszel",
+" akkor",
+" egyszer",
+" újfent",
+" máskor",
+" télen",
+" mégis",
+" nyáron",
+" reggel",
+" éjjel",
+];
+var S16D =
+["x",//4/12//if b<2 then left this else ran 9
+" pőre",
+" drága",
+" kedves",
+" nedves",
+" borzos",
+" sírva",
+" morcos",
+" hetyke",
+" bamba",
+" véled",
+" nálad",
+" néked",
+];
+var S16E =
+["x",//5/15//ifb>0&b<6 then ran 15 else ran 13
+" anyósod.",
+" elődöd.",
+" Ilonkád.",
+" Etelkád.",
+" Arankád.",
+" oroszkád.",
+" imádód.",
+" adósod.",
+" Iluskád.",
+" utódod.",
+" Irénkéd.",
+" apácád.",
+" üzéred.",
+" az isten.",
+" az asszony.",
+];
+
+
+
+var S16F =
+["x",//6/20
+"Cserhalom",
+"Életek",
+"Állatok",
+"Vérebek",
+"Ördögök",
+"Várurak",
+"Várnagyok",
+"Pest-Buda",
+"Debrecen",
+"Tolvajok",
+"Lengyelek",
+"Németek",
+"Angolok",
+"Orvosok",
+"Egriek",
+"Koldusok",
+"Tankosok",
+"Vesztesek",
+"Vétkesek",
+"Szarvasok",
+];
+
+
+var S16G =
+["x",//7/12
+" és az apák",
+" eltitkolt",
+" elfojtott",
+" átkártolt",
+" elperzselt",
+" elfuserált",
+" elfeledett",
+" oly gyönyörű",
+" ellebegő",
+" elrepedő",
+" elragadó",
+" oly pompás",
+];
+var S16H =
+["x",//8/15
+" hírét",
+" szennyét",
+" hamvát",
+" mocskát",
+" piszkát",
+" vackát",
+" bűzét",
+" félszét",
+" vágyát",
+" selymét",
+" vásznát",
+" színét",
+" gyöngyét",
+" ékét",
+" fényét",
+];
+var S16I =
+["x",//9/16
+" hozta fiad.",
+" dobta feléd. ",
+" szórta reád.",
+" dobta eléd.",
+" hozta neked.",
+" adta neked.",
+" adta alád.",
+" dobta feléd.",
+" tette eléd. ",
+" tette alád.",
+" lökte eléd.",
+" hozta nejed.",
+" hozta feléd.",
+" adta fiad.",
+" hozta alád.",
+" szórta feléd.",
+];
+
+//strofa 16 logic //checked ok // checked with source, correct 190928
+
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani,  temp;
+var sor1;
+
+if (mod=="koltoi") {
+
+	
+}else{
+
+rana = vel(20);//ok 1
+ranb = vel(15);//ok 2
+ranc = vel(11);//ok 3
+//line 4 ok
+if (ranb<2){rand=0
+}else{rand=vel(9)
+};
+if ((ranb>0)&&(ranb<6)){rane=vel(15)
+}else{rane=vel(13)
+};
+//line 5 ok
+
+ranf = vel(20);//ok 6
+rang = vel(12);//ok 7
+ranh = vel(15);//ok 8
+rani = vel(16);//ok 9
+
+};
+
+
+sor1 = S16A[rana] + S16B[ranb] + S16C[ranc]; 
+if(rand!=0){sor1 = sor1 + S16D[rand]};
+sor1 = sor1 + S16E[rane]+"</br>"  + S16F[ranf]  + S16G[rang]  + S16H[ranh] + S16I[rani];
+
+
+//sor1 = sor1 + "</br>OK S16" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf  +" g:" + rang+" h:" + ranh +" i:" + rani;
+return sor1;
+
+
+
+}
+function S17(mod){
+var S17A =
+["x",
+"Álmodozó",
+"Ébredező",
+"Vesztegelő",
+"Mélázó",
+"Szenvelgő",
+"Részegedő",
+"Rostokoló",
+"Elpihenő",
+"Megpihenő",
+"Elnyugovó",
+"Megnyugvó",
+"Elfekvő",
+"Kocsmázó",
+"Öldöklő",
+"Haldokló",
+"Hőbörgő",
+"Hintázó",
+"Sétáló",
+"Szédelgő",
+"Elfuserált",
+"Gyári melós",
+"Rókavadász",
+"Vendéglős",
+"Kőszobrász",
+"Kíntornász",
+"Kincskereső",
+"Szertornász",
+"Belgyógyász",
+"Taxi sofőr",
+"Sekrestyés",
+"Jó alakú",
+"Haldokló",
+"Elhanyagolt",
+"Csókálló",
+"Fényűző",
+"Hitvalló",
+"Kővé vált",
+"Bajkeverő",
+"Rosszakaró",
+"Összeaszott",
+"Szarkavaró",
+"Szeszfőző",
+"Egzotikus",
+"Ópiumos",
+"Rapszodikus",
+"Hipnotikus",
+"Önkéntes",
+];
+
+var S17C =
+["x",
+" szüleink",
+" nagyapánk",
+" nagyanyánk",
+" rokonunk",
+" bácsink",
+" bátyám",
+" bátyánk",
+" néném",
+" nénénk",
+" rokonok",
+" fiaink",
+" fattyunk",
+" eleink",
+" ősünk",
+" ükapánk",
+" ükanyánk",
+" ősöm",
+];
+var S17D =
+["x",
+" bűnét",
+" mocskát",
+" piszkát",
+" szemetét",
+" báját",
+" vétkét",
+" szennyét",
+" gyönyörét",
+" vagyonát",
+" kenyerét",
+" cicijét",
+" szövegét",
+" aranyát",
+" selymét",
+" kelyhét",
+" papucsát",
+" szívét",
+" lelkét",
+" húsát",
+" vállát",
+" bőrét",
+" karját",
+" szőrét",
+" kacaját",
+
+" tettét",
+];
+var S17E =
+["x",
+" takarítjuk",
+" menekítjük",
+" aprítjuk",
+" belevágjuk",
+" beledobjuk",
+" lesöpörjük",
+" letaszítjuk",
+" betemetjük",
+" betakarjuk",
+" besöpörjük",
+" betaszítjuk",
+
+" belezúzzuk ",
+
+" beaprítjuk",
+
+" belehintjük",
+" beleszórjuk",
+" belesózzuk",
+" ködösítjük",
+];
+var S17F =
+["x",
+" a földbe.",
+" a tűzbe.",
+" a sárba.",
+" a lyukba.",
+" a sírba.",
+" a porba.",
+" a kútba.",
+" a tóba.",
+" a vízbe.",
+" a hóba.",
+" a fűbe.",
+
+
+"az üstbe",
+" agyagba.",
+];
+var S17G =
+["x",
+"Rengeteget",
+"Retteneset",
+"Isteneset",
+"Förgeteget",
+"Esztelenül",
+"Csendesedünk,",
+"Bánatosan",
+"Rettenesen",
+"Jókedvből",
+"Álmosodunk,",
+"Tönkre megyünk,",
+"Szégyenből",
+"Ocsmányan",
+"Gyöngéden",
+"Könnyelműn",
+"Halványan",
+"Szeplősen",
+"Bűntudván",
+"Bús szívvel",
+"Álcázón",
+"Restségből",
+];
+var S17H =
+["x",
+" hazudunk.",
+" falazunk.",
+" takarunk.",
+" tagadunk.",
+" guritunk.",
+" tagadunk.",
+" tarolunk.",
+" zsarolunk.",
+" perelünk.",
+" lapulunk.",
+" lihegünk.",
+" mekegünk.",
+" makogunk.",
+" csipegünk.",
+];
+var S17I =
+["x",
+" Nincs többé hitelünk.",
+" Nincsen már hitelünk.",
+" Nem lesz már hitelünk.",
+" Felbomlott a szavunk.",
+" Nem sokat ér a szavunk.",
+" Herdáljuk hitelünk.",
+" Hol van még becsület?",
+" Elkurvult a szavunk.",
+" Megbomlott az agyunk.",
+" Mészárszék az eszünk.",
+" Mészárszék az agyunk.",
+" Véreskést csevegünk.",
+" Vasrácsból köpenyünk.",
+" Elfogy az össz hitelünk.",
+" Másra se jó a szavunk.",
+" Megzápul hitelünk.",
+" Elhervad hitelünk.",
+" Elposhad hitelünk.",
+" Szétporlik hitelünk.",
+" Elrothad hitelünk.",
+" Megfonnyad hitelünk.",
+" Elfonnyad hitelünk.",
+" Elkurvul hitelünk.",
+" Nincs itt már becsület!",
+];
+
+//strofa 17 logic //checked OK // checked with source, correct 190928
+var rana, ranc, rand, rane, ranf, rang, ranh, rani, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(47);
+if (rana>42){
+	ranc = vel(12);
+	}
+else {
+	ranc = vel(17);
+	}
+rand = vel(25);
+rane = vel(17);
+ranf = vel(13);
+
+rang = vel(21);
+ranh = vel(14);
+rani = vel(24);
+	
+}else{
+
+rana = vel(47);
+if (rana>42){
+	ranc = vel(12);
+	}
+else {
+	ranc = vel(17);
+	}
+rand = vel(24);
+rane = vel(11);
+ranf = vel(11);
+
+rang = vel(21);
+ranh = vel(14);
+rani = vel(24);
+
+
+
+};
+
+
+sor1 = S17A[rana] + S17C[ranc] + S17D[rand] + S17E[rane]  + S17F[ranf]+ "</br>"  + S17G[rang] + S17H[ranh] + S17I[rani];
+
+
+//sor1 = sor1 + "</br>OK S17" +" a:" + rana +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf  +" g:" + rang+" h:" + ranh +" i:" + rani ;
+return sor1;
+}
+function S18(mod){
+var S18A =
+["x",
+"Párizsi csík",
+"Kis zsír-folt",
+"Tengeri szörny",
+"Almalevél",
+"Skót hímzés",
+"Városi sár",
+"Vállaji sár",
+"Tengeri gyöngy",
+"Kis földgömb",
+"Termál víz",
+"Zöld fügefák",
+"Kéjlekvár",
+"Szilvalevél",
+"Szőlőfürt",
+"Bodzavirág",
+"Orgona-ág",
+"Gyémánt-csepp",
+"Gyöngykoszorú",
+"Körtevirág",
+"Nyárfa-ezüst",
+];
+var S18B =
+["x",
+" csöcse mentén...",
+" fara táján...",
+" a ruháján...",
+" a hajában...",
+" nyaka mentén...",
+" fara mentén...",
+" haja mentén...",
+" nyaka táján...",
+" csöcse táján...",
+" derekánál...",
+" a bokáján...",
+" szeme mélyén...",
+" a szeméből...",
+" a kezéből...",
+" a kezénél...",
+" a csöcsénél...",
+" ajakánál...",
+" füle táján...",
+" a nyakánál...",
+" a szeménél...",
+
+
+" eres ingnyak ",
+" arasz ángyó",
+" turulinkó",
+" terebantin",
+" babatangó",
+" csöcse mentén",
+" deres örmény",
+" fara csüngmó",
+" gararingló",
+" javasasszony",
+];
+var S18C =
+["x",
+" most!",
+" pont,",
+" lám!",
+" ah!",
+" ejh!",
+" hé!",
+" hű!",
+" csüccs!",
+" nász!",
+" vajh,",
+" ám",
+];
+var S18D =
+["x",
+" csudajó...",
+" csupa szín...",
+" csupaszon...",
+" csoda szép...",
+" csacsikám...",
+" cicukám...",
+" picikém...",
+" hidegen...",
+" melegen...",
+" öregem...",
+" aranyom...",
+" tüzesen...",
+" vörösen...",
+" deresen...",
+" finoman...",
+" gyönyörűm...",
+];
+var S18E =
+["x",
+" tovaringyó!",
+" pihekönnyű!",
+" csereszőr ő!",
+" aranyasszony!",
+" sarokasszony!",
+" mire jó még?",
+" mire használsz?",
+" mire rímelsz?",
+" tolató hő!",
+" sose csámcsogj!",
+" ha lefekszel!",
+" kire fekszem!",
+" ha lefekszem!",
+" kerekasszony!",
+" vezetőke!",
+" szopogatnám!",
+
+" tolató-hó.",
+" telelő-hő.",
+" tudatoszkán.",
+" belebömböl.",
+", na ki csámcsog?!",
+" tetején tej.",
+" tovaringyó.",
+" tülekedvén.",
+];
+var S18F =
+["x",
+"Ejnye, a",
+"Bezzeg a",
+"Nézd csak, a",
+"Minden a",
+"Már csak a",
+"Hajjaj, a",
+"Füstöl a",
+"S végül a",
+"S itt van a",
+"S hol van a",
+"Hej-haj, a",
+
+"Bánat a",
+"Véres a",
+"Fegyver a",
+"Ráspoly a",
+"Ébred a",
+];
+var S18G =
+["x",
+"z ülvesekő!",
+"z álvasutas!",
+" táboribanc!",
+" vármegyeház!",
+" tengeripacs!",
+" féldecigány!",
+" ferdelelő!",
+" szikragyogó!",
+" szikrafogó!",
+"z élesemény!",
+"z élvelejó!",
+" pillan(a)tás!",
+
+
+" kancsuka volt.",
+" árjakabú.",
+" vár-megyehá'.",
+" varjakadó.",
+" élveszedelm.",
+" bambibibam.",
+" újrakodó.",
+" helyrekedő.",
+" székrekedés",
+];
+var S18H =
+["x",
+" Példaadó",
+" Vastagodó",
+" Tisztelegő",
+" Díszvacsorán",
+" Vastagadó",
+" Vesztegelő",
+" Pendely alá",
+" Létra mögött",
+" Lóca mögött",
+" Lóca alatt",
+" Asztal alatt",
+" Pendely alatt",
+" Szoknya alatt",
+
+" Verstagoló",
+" Közlekedő",
+" Lábravaló",
+];
+var S18I =
+["x",
+" renegát.",
+" majom, ó.",
+" pici pötty.",
+" jatagán.",
+" pecabot.",
+" hetyepetty.",
+" pulya-bók.",
+" bakacsók.",
+" aranyér. ",
+" mese-szőr.",
+" teveszőr.",
+" paca hül.",
+" paca nő.",
+" baka-nyál.",
+" teve reng.",
+" baka-szó.",
+" baka-tűz.",
+" bakabát.",
+" bakanóc.",
+" bakanász.",
+" ",
+
+" meredély.",
+" maradály.",
+" zebegény.",
+];
+//strofa 18 logic //checked OK // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(20);
+ranb = vel(30);
+ranc = vel(11);
+rand = vel(16);
+rane = vel(24);
+
+ranf = vel(16);
+rang = vel(21);
+ranh = vel(16);
+rani = vel(23);
+	
+}else{
+
+rana = vel(20);
+ranb = vel(20);
+ranc = vel(11);
+rand = vel(16);
+rane = vel(16);
+
+ranf = vel(11);
+rang = vel(12);
+ranh = vel(13);
+rani = vel(20);
+
+
+};
+
+
+sor1 = S18A[rana] + S18B[ranb] + S18C[ranc] + S18D[rand] + S18E[rane]+ "</br>"  + S18F[ranf]  + S18G[rang] + S18H[ranh] + S18I[rani];
+
+
+//sor1 = sor1 + "</br> OK S18" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf  +" g:" + rang+" h:" + ranh +" i:" + rani ;
+return sor1;
+}
+function S19(mod){
+var S19A =
+["x",//1
+"Lágerből",
+"Börtönből",
+"Fogdából",
+"Tébolyból",
+"Cellából",
+"Rabságból",
+"Rabszívből",
+"Zárkából",
+"Karcerből",
+"Rabszájból",
+"Fogságból",
+"Fegyházból",
+
+"Markóból",
+];
+var S19B =
+["x",//2
+" szabadult",
+" menekült",
+" kiszakadt",
+" kirepült",
+" kifolyó",
+" kifutó",
+" eredő",
+" szakadó",
+" születő",
+" repedő",
+" epedő",
+" kibukó",
+" szálló",
+" kinövő",
+" roppant",
+" forró",
+" őrült",
+" felemás",
+
+" döngő",
+" csengő",
+" fröccsent",
+" rebbent",
+" robbant",
+" pattant",
+];
+
+var S19C =
+["x",//3
+" szerelem",
+" átkok",
+" gondok",
+" honvágy",
+" szeretet",
+" féltés",
+" bosszú",
+" szidalom",
+" haragunk",
+" vérszomj",
+];
+
+var S19D =
+["x",//4
+" tüze éled.",
+" tüze ébred.",
+" szele lebben.",
+" tüze lebben.",
+" szele éled.",
+" szele ébred.",
+" heve robban.",
+" heve ébred.",
+" heve éled.",
+" heve lebben.",
+];
+
+
+var S19E =
+["x",//5
+" Először",
+" A hóban",
+" A bajban",
+" Elébb még",
+" A tűzben",
+" A hőben",
+" Előbb még",
+" A vészben",
+" A zajban",
+" Azonnal",
+" Ezennel",
+" Ugyancsak",
+" Örömmel",
+" Ez egyszer",
+" Ijedtén",
+" Akárha",
+
+" Ocsúdtán",
+" Emitten",
+];
+
+var S19F =
+["x",//5
+"Félteni",
+"Sújtani",
+"Bántani",
+"Fojtani",
+"Ejteni",
+"Tiltani",
+"Rontani",
+"Ártani",
+"Írtani",
+"Sérteni",
+
+"Bontani",
+"Oltani",
+"Ölteni",
+"Dűteni",
+"Hűteni",
+"Ontani",
+"Menteni",
+"Sejteni",
+"Inteni",
+"Bújtani",
+"Dönteni",
+"Váltani",
+"Kelteni",
+"Félteni",
+];
+var S19G =
+["x",//6
+" enged a múlt",
+" bíztat a múlt",
+" súlykol a múlt",
+" buzdit a múlt",
+" sürget a múlt",
+" zargat a múlt",
+" lökdös a múlt",
+" késztet a múlt",
+" hajszol a múlt",
+" kerget a múlt",
+" fűt a jövő",
+" kész a jövő",
+" hív a jövő",
+" győzköd a múlt",
+" fűt az idő",
+];
+
+var S19H =
+["x",//7
+", aztán",
+", később",
+" s végtén",
+" s egyszer",
+" s végül",
+" s többnyire",
+" s végtibe",
+" s végtire",
+" s majdan",
+", majdan",
+", mígnem",
+
+" s egykor",
+" s akkor",
+];
+var S19I =
+["x",//8
+" megbabonáz.",
+" porba lapít.",
+" földre taszít.",
+" földarabol.",
+" szétkaszabol.",
+" földre teper.",
+" földbe temet.",
+" megkeserít.",
+" sárba taszít.",
+" porba taszít.",
+" porba teper.",
+" sírba taszít.",
+" sírba temet.",
+" sírba segít.",
+" földbe segít.",
+" földbe takar.",
+" sírba takar.",
+" sírba teper.",
+" sírba tapos.",
+" földbe tapos.",
+
+" porba tapos.",
+" sárba tapos.",
+" sárba teper.",
+];
+
+
+//strofa 19 logic //checked OK // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani,  temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(13);
+ranb = vel(24);
+ranc = vel(10);
+rand = vel(10);
+rane = vel(18);
+
+ranf = vel(24);
+rang = vel(15);
+ranh = vel(13);
+rani = vel(23);
+
+	
+}else{
+
+rana = vel(12);
+ranb = vel(18);
+ranc = vel(10);
+rand = vel(10);
+rane = vel(16);
+
+ranf = vel(10);
+rang = vel(15);
+ranh = vel(11);
+rani = vel(20);
+
+
+};
+
+
+sor1 = S19A[rana] + S19B[ranb] + S19C[ranc] + S19D[rand] + S19E[rane]+ "</br>"  + S19F[ranf]  + S19H[ranh] + S19G[rang] + S19I[rani]
+
+
+//sor1 = sor1 + "</br>OK S19" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf  +" h:" + ranh +" g:" + rang+" i:" + rani 
+return sor1;
+}
+function S20(mod){
+var S20A =
+["x",
+"Házsongárd",
+"Hollókő",
+"Lomnici csúcs",
+"Galyatető",
+"Mont Everest",
+"Gellérthegy",
+"Kis-Balaton",
+"Alpesi táj",
+"Alföldön",
+"Erdélyben",
+];
+var S20B =
+["x",
+" ti ti tá",
+" tá tá",
+" ti ti tá",
+" tá tá",
+" ti ti tá",
+" tá tá",
+" ti ti tá",
+" tá tá",
+" ti ti tá",
+" tá tá",
+" ti ti tá",
+" tá tá",
+];
+var S20C =
+["x",
+"-borozáskor.",
+"-bori fürdő.",
+"-bori kórház.",
+"-bori lelkész.",
+"-bori ágyú.",
+"-bori postás.",
+"p-szeradagként.",
+"b-laüvegből.",
+"rnyalatokból.",
+"fonyaízű.",
+"ji sajátság.",
+"ltosok arcán.",
+"-rogatóstól.",
+"merikából.",
+"lomelűző.",
+"porodottan.",
+"rok előttem.",
+"rok utánam.",
+"nczene csendül.",
+"panyag-orgona.",
+"pcukor árus.",
+"rgyas igével.",
+"rgyi hibával.",
+"rsadalomrajz.",
+"voli tájak.",
+"vvezetékes.",
+];
+var S20D =
+["x",
+" Még se",
+" Jaj, de",
+" Félve",
+" Nyögve",
+" Fájva",
+" Fázva",
+" Rejtve",
+" Sírva",
+" Sértve",
+" Bőgve",
+];
+var S20E =
+["x",
+" világítsz!",
+" igyekszel.",
+" vigyáztál.",
+" vadultál.",
+" ugattál.",
+" tapodtál.",
+" tegeztél.",
+" bagóztál.",
+" cseréltél.",
+" ütöttél.",
+" maradtál.",
+" okítlak.",
+
+
+" degeszre.",
+" fajultál?",
+" csodállak.",
+" feszítlek.",
+" bizonyság.",
+" eretnek.",
+" vetültél.",
+];
+var S20F =
+["x",
+"Már soha",
+"Többé",
+"Most már",
+"Innen",
+"Látod-e?",
+"Hallod-e!",
+"Érted-e?",
+"Tudd, hogy",
+"Halld, hogy",
+"Lásd, hogy",
+"Sajnos,",
+];
+var S20G =
+["x",
+" nincs pihenés! –",
+" nem menekülsz! –",
+" nincs menedék! –",
+" nincs hova menj! –",
+" nincs kifelé! –",
+" nincs kaszakő! –",
+" nincs ereszalj! –",
+" nincs zeneszó! –",
+" nincs nyaralás! –",
+" nincs haza út! –",
+" nincs nyugalom! –",
+" nincs kegyelem! ",
+];
+var S20I =
+["x",
+" jönnek a",
+" várnak a",
+" lesnek a",
+" fagytodig",
+" reggelig",
+" holnapig",
+" száz napig",
+" holnap is",
+" holtodig",
+" sírodig",
+" jártodig",
+" éjjel is",
+" este is",
+" évekig",
+];
+var S20K =
+["x",
+"z álcsecsemők",
+"z ónkatonák...",
+"z űrrepülők...",
+"z orgonafák...",
+"z áldozatok...",
+" fejbetegek... ",
+" hajt a tatár!",
+" űz a nyomor!",
+" űz a tatár!",
+" hajt a nyomor!",
+" űz a család!",
+" hajt a család!",
+" szaggat a sás!",
+" szúr a szemed!",
+" szúr a magány!",
+" vagdal a sás!",
+" vagdal a szél!",
+" szaggat a kór!",
+" vág a bilincs!",
+" szúr a nyomor!",
+" űz a nyomor!",
+" űz a magány!",
+];
+//strofa 20 logic //checked ok /// checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, rani, rank, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(10);
+ranb = vel(12);
+ranc = vel(26);
+rand = vel(10);
+rane = vel(19);
+
+ranf = vel(11);
+rang = vel(12);
+if (rang> 10) {
+	rani = vel(11);
+} else {
+	rani = vel(14);
+}
+if (rani <4) {
+	rank = vel(6);
+} else {
+	rank = vel(16);
+	}
+}else{
+rana = vel(10);
+ranb = vel(12);
+ranc = vel(26);
+rand = vel(10);
+rane = vel(12);
+
+ranf = vel(11);
+rang = vel(12);
+if (rang> 10) {
+	rani = vel(11);
+} else {
+	rani = vel(14);
+}
+if (rani <4) {
+	rank = vel(6);
+} else {
+	rank = vel(16);
+}
+};
+
+
+sor1 = S20A[rana] + S20B[ranb] + S20C[ranc] + S20D[rand] + S20E[rane]+ "</br>"  + S20F[ranf] + S20G[rang] + S20I[rani]+ S20K[rank];
+
+
+//sor1 = sor1 + "</br>OK S20" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:" + rang +" i:" + rani +" k:" + rank
+return sor1;
+
+}
+function S21(mod){
+var S21A =
+["x",
+"Mustárt! Mustárt",
+"Lekvárt! Lekvárt",
+"Mézet! Mézet",
+"Cukrot! Cukrot",
+"Lekvárt! Mézet",
+"Mézet! Lekvárt",
+"Friss vajat enyhén",
+"Zsírt! Libazsírt is",
+"Forró hurkát",
+"Étolajat! Zsírt",
+"Sárga vajat! Zsírt",
+"Tejfölt! Tejfölt",
+"Tejfölt! Mézet",
+"Mézet! Tejfölt",
+"Tejfölt! Cukrot",
+"Cukrot! Tejfölt",
+"Zsírt és tejfölt",
+"Tejfölt! Lekvárt",
+"Lekvárt! Tejfölt",
+"Langyos mézet",
+"Zsíros tejfölt",
+"Tejfölös ondót",
+"Sajtot! Sajtot",
+"Sajtot! Tejfölt",
+"Tejfölt! Sajtot",
+"Krémet! Krémet",
+"Krémet! Mézet",
+"Mézet! Krémet",
+"Mézes krémet",
+"Cukrot! Krémet",
+"Krémet! Cukrot",
+"Cukros krémet",
+"Langyos krémet",
+"Lekvárt! Krémet",
+"Krémet! Lekvárt",
+"Francia krémet",
+"Osztrák krémet",
+"Mákot! Krémet",
+"Krémet! Mákot",
+"Mákos krémet",
+"Krémes mákot",
+"Cukrot! Mákot",
+"Mákot! Cukrot",
+"Cukros mákot",
+"Mákos cukrot",
+"Fokhagymás zsírt",
+"Meggyet, málnát",
+"Szőke tepertőt",
+"Sonkát, kolbászt",
+"Őszibarackot",
+"Sonkát, hurkát",
+"Hurkát, kolbászt",
+
+
+
+
+
+
+"Májpástétumot",
+];
+var S21B =
+["x",
+" kenj a kenyérre.",
+" kenj piritósra.",
+" kenj a cipóra.",
+" tégy a zsebedbe.",
+" rakj a bödönbe.",
+" rakj a zsebedbe.",
+" rakj a kosárba.",
+" tégy a kosárba.",
+" tégy a bödönbe.",
+" most csomagolj be.",
+" kérj a kalácsra.",
+" kérj a kenyérre.",
+" kérj a cipóra.",
+" kenj a kalácsra.",
+" tégy a kalácsra.",
+" tégy a cipóra.",
+" rakj a kalácsra.",
+" rakj a cipóra.",
+" rakj a kenyérre.",
+" tégy piritósra.",
+" kérj piritósra.",
+" rakj piritósra.",
+];
+var S21C =
+["x",
+" Ne várj a halálra!",
+" Ne várj Gizikére!",
+" Ne nézz a szemembe!",
+" Ne vidd el az álmom!",
+" Ne hagyd magad! Élvezz!",
+" Ne várj, ne ragaszkodj!",
+" Ne félj, ne pisilj be!",
+" Ne öntsd ki a lelked!",
+" Ne mondd ki a jelszót!",
+" Ne mondj le a jóról!",
+" Ne szállj le a lóról!",
+" Ne nézz a tükörbe!",
+" Ne tedd el a késed!",
+" Ne vedd le az inged!",
+" Ne szarj be előre!",
+" Na mondd, ami még bánt!",
+" Ne higyj a jövődbe!",
+" Ne várj soha jobbat!",
+" Ne hagyd ki a ziccert!",
+" Ne ülj fel a lóra!",
+" Ne szállj a vonatra!",
+" Ne szállj repülőre!",
+" Ebédre ne készülj!",
+" Ne hidd, hogy elég lesz!",
+" Ne félj a fosástól!",
+" Ne kend magad össze!",
+" Ne félj az evéstől!",
+" Ne félj a kajától!",
+" Ne nyald meg az ujjad!",
+" Ne nyald le az ajkad!",
+" Ne nyald ki a bögrét!",
+" Ne szórd el a morzsát!",
+" Ne nyald ki a tányért!",
+];
+var S21D =
+["x",
+"Megzápult",
+"Elsápadt",
+"Összeesett",
+"Eltompult",
+"Megkergült",
+"Megsérült",
+"Elbambult",
+"Elkurvult",
+"Most dilinyós",
+"Tönkre hülyült",
+
+
+"Bambulaság",
+"Állva bolond",
+"Őrült lett",
+];
+var S21E =
+["x",
+" a világ!",
+" a hazánk!",
+" a hazám!",
+" a varázs!",
+" anyaföld!",
+" a falunk!",
+" a hitem!",
+" a hitünk!",
+" a megyénk!",
+" a szavad!",
+
+" a bokor.",
+" jeges űr.",
+" a nevem.",
+" a szavam.",
+" a falum!",
+];
+var S21F =
+["x",
+" Nyílnak az orgonafák.",
+" Róza, nem ér a nevem!",
+" Légy hedonista, ha tudsz!",
+" Légy szemafor! Vakarózz!",
+" Légy pacifista! ne hős!",
+" Jön Jani bácsi, a hős.",
+" Mint Puca Pista, pofázz...",
+" Majd hedonista leszend.",
+" Most hedonista lehetsz.",
+" Most hedonista leszel.",
+" Volt hedonista nyafog.",
+" Két hedonista nyafog.",
+" Majd pacifista leszel.",
+" Most pacifista lehetsz.",
+" Most pacifista leszel.",
+" Volt pacifista nyafog.",
+" Két pacifista nyafog.",
+" Majd onanista leszel.",
+" Most onanista leszel.",
+" Most onanista lehetsz.",
+" Volt onanista nyafog.",
+" Két onanista nyafog.",
+" S én, onanista-gyanús.",
+" S én, pacifista-gyanús.",
+" Ó, hedonista-kegyúr!",
+" Légy onanista! Tekerj!",
+" Már spekulálnia kell!",
+" Most spekulálni se kell.",
+" Ó, spekulálni akarsz?!",
+" Most spekulálni akarsz?",
+" Most spekulálj, ha akarsz!",
+" Most örömödre ihatsz!",
+" Most örömödre ehetsz!",
+" Itt örömödre ehetsz!",
+" Itt örömödre ihatsz!",
+" Nincs örömödre vigasz!",
+" Lásd, örömödre szarik!",
+" Szép szeretődre nevet!",
+" Szép szeretődre rogyik.",
+" Szard le a táltosokat!",
+" Verd ki a vérebeket!",
+" Várd ki a ''szebb'' napokat!",
+" Törd be a holnapokat!",
+" Törd meg a mennyei szót.",
+" Nyomd meg a kétkerekűt!",
+" Baszd meg a ''szebb'' napokat!",
+" Védjed a tetveidet.",
+" Lám, örömödre szarik!",
+" Lenge magyarban igyál.",
+" Lenge magyarban egyél.",
+" Hű szeretőmre szarik!",
+" Az! jön a székrekedés.",
+" Lám, jön a székrekedés.",
+" Sorsod a székrekedés!",
+" Kínos a székrekedés!",
+" Kínoz a székrekedés!",
+" Nincs szeretőd! Ne keress!",
+" Mint szemafor figyeled.",
+" Csak figyelem! Figyelem!",
+" Nincs kegyelem! Figyelem!",
+" Hatvanegy",
+];
+//strofa 21 logic // checked OK // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(53);
+ranb = vel(22);
+ranc = vel(33);
+
+rand = vel(13);
+rane = vel(15);
+ranf = vel(60);
+}else{
+rana = vel(52);
+ranb = vel(22);
+ranc = vel(33);
+
+rand = vel(10);
+rane = vel(10);
+ranf = vel(60);
+
+};
+
+
+sor1 = S21A[rana] + S21B[ranb] + S21C[ranc]+ "</br>" + S21D[rand] + S21E[rane]  + S21F[ranf] 
+
+
+//sor1 = sor1 + "</br>OK S21" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf 
+return sor1;
+
+}
+function S22(mod){
+var S22A =
+["x",
+"Ocsmányság",
+"Disznóság",
+"Káromlás",
+"KurvŐanyukád",//hiba?
+"Bájcsevegés",
+"Ócsárlás",
+"Náci nyögés",
+"Szórohadék",
+"Szentséglés",
+"Durva szöveg",
+
+"Kis nyilas ék",
+"Egy nyilas arc",
+"Egy nyilas úr",
+"Egy nyilas őr",
+];
+var S22B =
+["x",
+" feketíti a",
+" maszatolja a",
+" bitorolja a",
+" szagosítja a",
+" mocskolja a",
+" piszkítja a",
+" marjítja a",
+" büdösíti a",
+" nehezíti a",
+" foltozza a",
+
+" szarosítja a",
+" telefossa a",
+" begyalázza a ",
+" beszarozza a",
+" leszarozza a",
+" telefossa a",
+" lovagolja a",
+" díszíti a",
+" sarabolja a",
+];
+var S22C =
+["x",
+" könyvtár",
+" könyvek",
+" versek",
+" szentek",
+" művek",
+" könyvház",
+"z ízlés",//hiba?
+" tiszták",
+" bölcsek",
+" strófák",
+" vének",
+
+" balsors",
+" csontváz",
+" gondok",
+];
+var S22D =
+["x",
+" drága",
+" minta",
+" tiszta",
+" tarka",
+" gála",
+" szűzi",
+" játszi",
+" szende",
+" szimpla",
+" szürke",
+
+
+" hártya",
+" nyalka",
+];
+var S22E =
+["x",
+" ruháját.",
+" kabátját.",
+" zakóját.",
+" zekéjét.",
+" csuháját.",
+" derűjét.",
+" haragját.",
+" igéjét.",
+" darócát.",
+" csodáját.",
+
+
+
+" jövőjét.",
+];
+var S22F =
+["x",
+"Zúzott szó-",
+"Tördelt szó-",
+"Roppant szó-",
+"Éles szó-",
+"Vágó szó-",
+"Szúró szó-",
+"Végső szó-",
+"Tépő szó-",
+"Eltört szó-",
+"Roppant szó-",
+"Csapzott szó-",
+"Vagdalt szó-",
+"Dörzsölt szó-",
+"Őrölt szó-",
+"Őrült szó-",
+"Szétzúzott ",
+];
+var S22G =
+["x",
+"szerepek –",
+"cserepek –",
+"üvegek –",
+"darabok –",
+"szeletek –",
+"szedetek –",
+"kupacok –",
+"gyutacsok –",
+"kövecsek –",
+"kavicsok –",
+];
+var S22H =
+["x",
+" sértők,",
+" durvák,",
+" szúrók,",
+" fájók,",
+" vágók,",
+" sajgók,",
+" forrók,",
+" bántók,",
+" kínzók,",
+" sebtibe",
+" kocsmai",
+];
+var S22I =
+["x",
+"szemtelenek.",
+" féktelenek.",
+" szívtelenek.",
+" becstelenek.",
+" hasztalanok.",
+" szertelenek.",
+" fajtalanok.",
+" nyugtalanok.",
+" csintalanok,",
+" jogtalanok.",
+" gáttalanok.",
+" gáncstalanok.",
+" hontalanok.",
+" úttalanok.",
+" súlytalanok.",
+" féktelenek.",
+" hirtelenek.",
+" becstelenek.",
+" dicstelenek.",
+" szívtelenek.",
+" kénytelenek.",
+" meztelenek.",
+];
+
+//strofa 22 logic // checked ok // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(14);
+ranb = vel(19);
+ranc = vel(14);
+rand = vel(12);
+rane = vel(11);
+
+ranf = vel(16);
+rang = vel(10);
+ranh = vel(11);
+rani = vel(22);
+}else{
+rana = vel(10);
+ranb = vel(10);
+ranc = vel(11);
+rand = vel(10);
+rane = vel(10);
+
+ranf = vel(16);
+rang = vel(10);
+ranh = vel(11);
+rani = vel(22);
+};
+
+
+sor1 = S22A[rana] + S22B[ranb] + S22C[ranc] + S22D[rand] + S22E[rane]+ "</br>"  + S22F[ranf] + S22G[rang] + S22H[ranh]+ S22I[rani];
+
+
+//sor1 = sor1 + "</br>OK S22" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:" + rang +" h:" + ranh +" i:" + rani
+return sor1;
+}
+
+function S23(mod){
+var S23A =
+["x",
+"Itt",
+"Áll",
+"Vár",
+"Hív",
+"Csíp",
+"Tép",
+"Sír",
+"Húz",
+"Zúz",
+"Vág",
+];
+var S23B =
+["x",
+" a halál!",
+" a nyomor!",
+" a magány!",
+" a remény!",
+" a hiány!",
+" a hideg!",
+" a csömör!",
+" a pokol!",
+" a világ!",
+" a közöny!",
+" a csalás!",
+" a varázs!",
+];
+var S23C =
+["x",
+" Honi tájak",
+" Menedékünk",
+" Honi kertek",
+" Magyarország",
+" Tavirózsák",
+" Szűz kertek",
+" Puha ország",
+" Honi földek",
+" Kicsi ország",
+" Laza ország",
+" Operettünk",
+];
+var S23D =
+["x",
+" szépségét",
+" drámáját",
+" tempóját",
+" fekvését",
+" termését",
+" romlását",
+" balsorsát",
+" rémületét",
+" kedv-ficamát",
+" jókedvét",
+" tartását",
+" tűrését",
+];
+var S23E =
+["x",
+" keretezni...",
+" kibogozni...",
+" befogadni...",
+" kifigyelni...",
+" puhatolni...",
+" kitalálni...",
+" levezetni...",
+" lefülelni...",
+" kinevetni... ",
+" renoválni...",
+" szavatolni...",
+];
+var S23F =
+["x",
+"most a te",
+"lenne a",
+"volna a",
+"íme a",
+"ez lesz a",
+"lesz ma a",
+"tudd, ez a",
+"lásd, ez a",
+"lám, ez a",
+"ez ma a",
+"most a kereszted, lám!",
+"lenne kereszted most.",
+"íme, kereszted most.",
+"ez ma a tennivalód!",
+"ennyi a tennivalód!",
+"ez ma a gondod-ügyed.",
+"ez ma a terhed még!",
+"ez van a válladon... ó!",
+"ennyi a munkád most!",
+"semmit elébb ne csinálj!",
+"ennyit akarj! ezt tedd!",
+"ennyi a gondod-ügyed.",
+"ennyi a terhed még!",
+"ennyi a terhed most!",
+"ennyire  légyen erőd!",
+"szánj rá egy kis időt!",
+"tedd rá életedet!",
+"tedd rá lelkedet is!",
+"tedd rá mindenedet!",
+"csak türelemmel tedd!",
+"csak szerelemből megy!",
+"ezt tedd! egyre csak ezt!",
+"most ezt tedd, ha tudod!",
+"most tedd ezt, ha tudod!",
+"ez ma a szent robotod!",
+"ennyi a szent  robotod!",
+"részegen is robotolj!",
+"végezd tennivalód!",
+"végezd szent robotod!",
+"ősi szokás! Tedd hát! ",
+];
+var S23G =
+["x",
+" tennivalód.",
+" gondod-ügyed.",
+" terhed még.",
+" sorsod?! az ám!",
+" válladon... ó!",
+" munkád még!",
+" szent robotod!",
+" téged ölő!",
+" rád kiszabott!",
+" rád kivetett!",
+];
+var S23H =
+["x",
+" Zúzd be a",
+" Vard be a",
+" Verd ki a",
+" Kösd el a",
+" Kösd be a",
+" Gyűrd le a",
+" Fogd le a",
+" Nyeld le a",
+" Nyögd ki a",
+" Tárd ki a",
+];
+var S23I =
+["x",
+"z álmaidat!",
+" bánatodat!",
+"z isteneket! ",
+" szellemeket!",
+"z asszonyokat!",
+" bér-ciciket!",
+" szex aranyát!",
+"z életedet!",
+" foltjaidat!",
+" fürtjeidet!",
+" gondjaidat!",
+" kételyedet!",
+" kedv aranyát!",
+" kedv erejét!",
+" szex örömét!",
+];
+
+//strofa 23 logic // checked OK // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, temp;
+var sor1;
+
+if (mod=="koltoi") {
+//no extra same as other
+rana = vel(10);
+ranb = vel(12);
+ranc = vel(11);
+rand = vel(12);
+rane = vel(11);
+
+ranf = vel(40);
+if (ranf<11) {
+	rang=vel(10);
+	}
+else {
+	rang=0;
+	}
+ranh = vel(10);
+rani = vel(15);
+}else{
+rana = vel(10);
+ranb = vel(12);
+ranc = vel(11);
+rand = vel(12);
+rane = vel(11);
+
+ranf = vel(40);
+if (ranf < 11){
+	rang=vel(10);
+	}
+else {
+	rang=0;
+	}
+ranh = vel(10);
+rani = vel(15);
+};
+
+
+sor1 = S23A[rana] + S23B[ranb] + S23C[ranc] + S23D[rand] + S23E[rane]+ "</br>"  + S23F[ranf] ;
+if (rang>0) { 
+	sor1 = sor1 + S23G[rang];
+	}
+sor1 = sor1 + S23H[ranh]+ S23I[rani];
+
+
+//sor1 = sor1 + "</br>OK S23" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:" + rang +" h:" + ranh +" i:" + rani
+return sor1;
+}
+
+function S24(mod){
+var S24A =
+["x",
+"Lám heves",
+"Mily buja",
+"Mily tüzes",
+"Mily csacsi",
+"Kis csacsi",
+"Kis buja",
+"Oly puha",
+"Oly buja",
+"Oly csacsi",
+"Oly mulya",
+"Lám, mulya",
+"Mily mulya",
+"Mily heves",
+"Mily szagos",
+];
+var S24B =
+["x",
+" és virgonc",
+" és rázós",
+" és szuka is",
+" és szívós",
+" és buta is",
+" és baba is",
+" és szerető",
+" és csöcsös is",
+" és kapatos",
+", ölbevaló",
+" és aranyos",
+];
+var S24C =
+["x",
+" örömében a",
+" Szodomában a",
+" táncában a",
+" jöttében a",
+" Budapesten a",
+" Zágrábban a",
+", ha mosakszik a",
+", ha lefekszik a",
+", ha veszekszik a",
+", ha tolakszik a",
+", ha leguggol a",
+", ha lecsüccsen a",
+", ha becsápol a",
+", ha ebédel a",
+", ha virágzik a",
+" Miskolcon a",
+" Pelsőcön a",
+" Párizsban a",
+" futtában a",
+" mégében a",
+", ha becsöppen a",
+", ha bezörget a",
+", ha becsönget a",
+];
+var S24D =
+["x",
+" mennyei",
+" szombati",
+" holnapi",
+" tegnapi",
+" templomi",
+" csárdai",
+"z isteni",
+" pénteki",
+" szerdai",
+" színpadi",
+];
+var S24E =
+["x",
+" tündér",
+" szépség",
+" nőcske!",
+" asszony!",
+" lányka!",
+" bálvány!",
+" báj-hölgy!",
+" szép hölgy!",
+" szép lány!",
+" fruska!",
+" nagylány!",
+" szűzlány!",
+];
+var S24F =
+["x",
+"Búja hevét",
+"Bája tüzét",
+"Ajka hevét",
+"Bája hevét",
+"Lendületét",
+"Gondolatát",
+"Ajka tüzét",
+"Bánatait",
+"Búja tüzét",
+"Bája tüzét",
+"Szíve hevét",
+"Szíve tüzét",
+"Lelki tüzét",
+"Lelki hevét",
+"Testi tüzét",
+"Testi hevét",
+"Láza okát",
+"Láza tüzét",
+"Láza fokát",
+"Búja fokát",
+];
+var S24G =
+["x",
+" kényes",
+" levegős",
+" szabatos",
+" elegyes",
+" tolatós",
+" szirupos",
+" remegő",
+" cselező",
+" legyező",
+" lobogó",
+" veretes",
+" zamatos",
+" szutykos",
+" cseveg",
+];
+var S24H =
+["x",
+" mozdulatok",
+" hangulatok",
+" gondolatok",
+" mondolatok",
+" szó-cafatok",
+" révületek",
+" kéjelgés",
+" gőzölgés",
+" hőzöngés",
+" költekezés",
+" mámorodás",
+];
+var S24I =
+["x",
+"ba szövi.",
+"ba öli.",
+"ba fedi.",
+"ba lepi.",
+" fedezik.",
+" felezik.",
+" terelik.",
+" perelik.",
+" vizezik.",
+" szerelik.",
+" keresik.",
+" kövezik.",
+" lövelik.",
+"be szövi.",
+"be öli.",
+"be fedi.",
+"be lepi.",
+" fedezi.",
+" övezi.",
+" öleli.",
+" erezi.",
+" pereli.",
+" vizezi.",
+" tereli.",
+" löveli.",
+" felezi.",
+"ba szövi.",
+"ba öli.",
+"ba fedi.",
+"ba lepi.",
+];
+
+//strofa 24 logic // checked OK // checked with source, correct 190928
+var rana, ranb, ranc, rand, rane, ranf, rang, ranh, rani, temp;
+var sor1;
+
+if (mod=="koltoi") {
+rana = vel(14);
+ranb = vel(11);
+ranc = vel(23);//itt van 5-tel tobb tetel sehol nem hasznalt
+rand = vel(10);
+rane = vel(12);
+
+ranf = vel(20);
+rang = vel(14);
+ranh = vel(11);
+if (ranh < 6) {
+	rani = vel(13);
+	}
+else if ((ranh > 5)&&(ranh < 7)){ 
+	rani = vel(13)+4;
+	}
+else if (ranh > 10) {
+	rani = vel(13)+17;
+	}
+else {
+	rani = vel(13);
+}
+
+}else{
+rana = vel(14);
+ranb = vel(11);
+ranc = vel(18);
+rand = vel(10);
+rane = vel(12);
+
+ranf = vel(20);
+rang = vel(14);
+ranh = vel(11);
+
+if (ranh < 6) {	
+	rani = vel(13);
+}else if ((ranh > 5)&&(ranh < 7)){ 
+	rani = vel(13)+4;
+}else if ((ranh > 6)&&(ranh < 11)){ 
+	rani = vel(13)+13;
+}else if (ranh > 10) {
+	rani = vel(13)+17;
+	}
+else {
+	rani = vel(13);
+}
+
+};
+
+sor1 = S24A[rana] + S24B[ranb] + S24C[ranc] + S24D[rand] + S24E[rane]+ "</br>"  + S24F[ranf] + S24G[rang] + S24H[ranh]+ S24I[rani];
+
+
+//sor1 = sor1 + "</br>OK S24" +" a:" + rana +" b:"+ ranb +" c:"+ ranc +" d:"+ rand +" e:"+ rane +" f:" + ranf +" g:" + rang +" h:" + ranh +" i:" + rani
+return sor1;
+}
+</script>
+</body>
+</html>
